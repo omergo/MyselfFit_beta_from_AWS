@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-apigateway-core\2.3.9\2d37dee49e0f8aeb22373dfda9f13305663b9c06\aws-android-sdk-apigateway-core-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2d37dee49e0f8aeb22373dfda9f13305663b9c06">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-apigateway-core-2.3.9_b5d1250d29353de1c3cde74152f677a243b8f72a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-core\2.3.9\2fa9ee0e95329912656c8ccd98991b195a3ea539\aws-android-sdk-core-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2fa9ee0e95329912656c8ccd98991b195a3ea539">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-core-2.3.9_27a9f43f8d9ee8268f12e0d3f4dfe34d5e38c4d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d368a59b067ea6add1a388b9f4b9fbbf1fd30ff3">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9bafa33855cc0be0ba159d470a0328db8d24369d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_e0bf2b4f441628f33e0d9ddbd34f9d444725c585\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-7.8.0_19e64e72ecd29b912c3260f9fa533fc3b5812bd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_92ae0c5040684a646b218862f1ec73ca4fe8f8a9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_24c46cbde714be0842274322039416f341dd73a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-sqs\2.3.9\a1278f3266ff8c936dd0de6485de8029a900091f\aws-android-sdk-sqs-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a1278f3266ff8c936dd0de6485de8029a900091f">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-sqs-2.3.9_67b8dbcc5434755e2631932cc0f5c4a76f6dc48e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-s3\2.3.9\8b4d1ccbb09daafd17aa3eba99af31ad8aecf505\aws-android-sdk-s3-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8b4d1ccbb09daafd17aa3eba99af31ad8aecf505">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-s3-2.3.9_5a560d6028ad066585987e2ce267ed71d2bfcdfa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-sns\2.3.9\4a9c68c102c695a24eb9bba09f8a472e576614e5\aws-android-sdk-sns-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4a9c68c102c695a24eb9bba09f8a472e576614e5">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-sns-2.3.9_e18cdbdcd29aa927c553d2676ffe2e2d08a693f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_7842875abeadd682d7796fb927eabe32676fe637\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_e9b5d18c1a490ab12a9d551d631d8b71c0e2d1f4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider\2.3.9\39a3018aee421bd16bc086a92b9bede977da5c93\aws-android-sdk-cognitoidentityprovider-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="39a3018aee421bd16bc086a92b9bede977da5c93">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognitoidentityprovider-2.3.9_7c6b537add25a8dfbe456e9b1b896d53e69194d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v13\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v13-23.1.0_40d066c4ff38665618be8a8b8f1bcde5ca9154dc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="eeb2d3ff80ed6a90c7510f45b35a5be75bce3e92">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_cef05230284ef165438c03b24fd333523dad7b83\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognito\2.3.9\d7e881325e8217fd65651fc7153a3db06f2e454c\aws-android-sdk-cognito-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognito-2.3.9_6f0596e96c6080358f5afe9fde4c59503612724e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_760f1ec138ff5889bf8307fde672d2540dc268fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_f4c34914e3a8a981ff59f910d1ca6a6c0dcb0b30\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\7.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-7.8.0_b1634b066b69379749fb61ba39924540d888188e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-pinpoint\2.3.9\2411e971f75652b978b550b7a8021af84e36d954\aws-android-sdk-pinpoint-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2411e971f75652b978b550b7a8021af84e36d954">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-pinpoint-2.3.9_882d9e241c23a5c09c79166c553057f599d10418\classes.dex" />
+    </item>
+
+</items>
