@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="23"
-    density="xxxhdpi"
+    abi="x86"
+    api-level="24"
+    density="560dpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="274815634661637"
+    timestamp="231115128171608"
     token="-7796200213578620055"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
@@ -23,15 +23,22 @@
         duration="0" />
 
     <artifact
-        location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="274815634661637"
+        timestamp="229579468205591"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="231115128171608"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>

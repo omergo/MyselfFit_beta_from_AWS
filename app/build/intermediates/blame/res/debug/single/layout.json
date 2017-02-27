@@ -68,12 +68,12 @@
         "source": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\layout\\nav_drawer_item.xml"
     },
     {
-        "merged": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
-        "source": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_title_item.xml"
-    },
-    {
         "merged": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_camera2_basic.xml",
         "source": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\src\\main\\res\\layout\\fragment_camera2_basic.xml"
+    },
+    {
+        "merged": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\layout\\abc_action_bar_title_item.xml"
     },
     {
         "merged": "C:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\res\\merged\\debug\\layout\\demo_content_list_item.xml",

@@ -1,4 +1,4 @@
-#Mon Feb 13 00:36:14 IST 2017
+#Mon Feb 27 09:41:23 IST 2017
 base.0=C\:\\Android\\Projects\\MyV\\myselffit-beta-aws-my-sample-app-android\\MySampleApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_cef05230284ef165438c03b24fd333523dad7b83
 renamed.1=classes.dex
 renamed.0=classes2.dex

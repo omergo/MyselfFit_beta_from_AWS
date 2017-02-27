@@ -62,6 +62,7 @@ import android.widget.Toast;
 
 import com.mysampleapp.MainActivity;
 import com.mysampleapp.R;
+import com.mysampleapp.ResultActivity;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -298,20 +299,21 @@ public class Camera2BasicFragment extends Fragment
                 }
                 case STATE_WAITING_LOCK: {
                     Integer afState = result.get(CaptureResult.CONTROL_AF_STATE);
-                    if (afState == null) {
+//TODO Omer need figure out why it is stuck here in some android models
+//                      if (afState == null) {
                         captureStillPicture();
-                    } else if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
-                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState) {
-                        // CONTROL_AE_STATE can be null on some devices
-                        Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
-                        if (aeState == null ||
-                                aeState == CaptureResult.CONTROL_AE_STATE_CONVERGED) {
-                            mState = STATE_PICTURE_TAKEN;
-                            captureStillPicture();
-                        } else {
-                            runPrecaptureSequence();
-                        }
-                    }
+//                    } else if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
+//                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState) {
+//                        // CONTROL_AE_STATE can be null on some devices
+//                        Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
+//                        if (aeState == null ||
+//                                aeState == CaptureResult.CONTROL_AE_STATE_CONVERGED) {
+//                            mState = STATE_PICTURE_TAKEN;
+//                            captureStillPicture();
+//                        } else {
+//                            runPrecaptureSequence();
+//                        }
+//                    }
                     break;
                 }
                 case STATE_WAITING_PRECAPTURE: {
@@ -847,7 +849,7 @@ public class Camera2BasicFragment extends Fragment
                     //sending to activity
                     Intent imageData = new Intent();
                     imageData.putExtra("data",mFile.toString());
-                    activity.setResult(MainActivity.RESULT_OK,imageData);
+                    activity.setResult(ResultActivity.RESULT_OK,imageData);
                     activity.finish();
                 }
             };

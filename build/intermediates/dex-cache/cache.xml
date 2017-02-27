@@ -21,15 +21,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d368a59b067ea6add1a388b9f4b9fbbf1fd30ff3">
-        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9bafa33855cc0be0ba159d470a0328db8d24369d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -39,30 +30,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-7.8.0_19e64e72ecd29b912c3260f9fa533fc3b5812bd2\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
         <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.7_92ae0c5040684a646b218862f1ec73ca4fe8f8a9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_24c46cbde714be0842274322039416f341dd73a0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -111,6 +84,51 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_760f1ec138ff5889bf8307fde672d2540dc268fa\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_f4c34914e3a8a981ff59f910d1ca6a6c0dcb0b30\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5cf095447b7e3e4cbb63f2297166715a7dedcc21">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_9bafa33855cc0be0ba159d470a0328db8d24369d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\7.8.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-7.8.0_19e64e72ecd29b912c3260f9fa533fc3b5812bd2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_24c46cbde714be0842274322039416f341dd73a0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\omergo\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-android-sdk-cognitoidentityprovider\2.3.9\39a3018aee421bd16bc086a92b9bede977da5c93\aws-android-sdk-cognitoidentityprovider-2.3.9.jar"
         jumboMode="true"
         optimize="true"
@@ -133,7 +151,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="eeb2d3ff80ed6a90c7510f45b35a5be75bce3e92">
+        sha1="3c07b4aa503ecc3e12b42294836cb1ee3c3d5ab3">
         <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_cef05230284ef165438c03b24fd333523dad7b83\classes.dex" />
     </item>
     <item
@@ -144,24 +162,6 @@
         revision="24.0.2"
         sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
         <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\aws-android-sdk-cognito-2.3.9_6f0596e96c6080358f5afe9fde4c59503612724e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_760f1ec138ff5889bf8307fde672d2540dc268fa\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_f4c34914e3a8a981ff59f910d1ca6a6c0dcb0b30\classes.dex" />
     </item>
     <item
         is-multidex="true"
