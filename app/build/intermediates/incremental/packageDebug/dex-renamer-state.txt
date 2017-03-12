@@ -1,7 +1,7 @@
-#Fri Mar 03 15:02:03 IST 2017
-base.0=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7768ed656f93140cd25e6b7d7be5c2cf6b590f72
+#Sun Mar 12 22:12:32 IST 2017
+base.0=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ca2df4870579cbb3cf6e3ed2d41bcd7531b744a8
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b1895f6b045aa787e89b84e1a41a2407d1e68a38/classes.dex
-base.1=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b1895f6b045aa787e89b84e1a41a2407d1e68a38
-file.0=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7768ed656f93140cd25e6b7d7be5c2cf6b590f72/classes.dex
+file.1=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c3f223e96ba80cfddb007c887f3f80a3117c9eda/classes.dex
+base.1=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c3f223e96ba80cfddb007c887f3f80a3117c9eda
+file.0=/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_ca2df4870579cbb3cf6e3ed2d41bcd7531b744a8/classes.dex

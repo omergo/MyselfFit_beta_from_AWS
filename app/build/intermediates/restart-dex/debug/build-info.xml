@@ -5,39 +5,39 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="22349545267555"
-    token="4469262006481731455"
+    timestamp="84450743352215"
+    token="-3177909628351492904"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="2812" />
+        duration="1590" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="91" />
+        duration="41" />
     <task
         name="verifier"
         duration="3" />
 
     <artifact
-        location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+        location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="19855189070973"
+        timestamp="84254466391057"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/outputs/apk/app-debug.apk"
+            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="22349545267555"
+        timestamp="84450743352215"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
     </build>
 

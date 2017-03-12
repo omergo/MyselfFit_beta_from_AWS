@@ -816,6 +816,7 @@ public class Camera2BasicFragment extends Fragment
      */
     private void captureStillPicture() {
         try {
+            Log.d(TAG, "In still capture");
             final Activity activity = getActivity();
             if (null == activity || null == mCameraDevice) {
                 return;

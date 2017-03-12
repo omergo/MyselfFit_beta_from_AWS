@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.Uri;
 import android.os.Bundle;
@@ -40,6 +41,8 @@ import java.io.IOException;
 
 import com.mysampleapp.R;
 
+import static android.R.attr.width;
+
 public class ResultActivity extends AppCompatActivity  {
 
     public static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -52,12 +55,14 @@ public class ResultActivity extends AppCompatActivity  {
     public String path;
 
     private Bitmap mImageBmp;
+    private Bitmap mImageBmpOut;
     private ImageView mImage;
     private TextView mTextViewBf;
     private Number mPercentage;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
@@ -76,50 +81,10 @@ public class ResultActivity extends AppCompatActivity  {
         if(extras==null) {
             //Starting the camera for result
             startCameraActivity(this.findViewById(android.R.id.content).getRootView());
-        } else {
-            //getting the photo
-            SharedPreferences prefs = getSharedPreferences("Bitmap", MODE_PRIVATE);
-            String restoredText = prefs.getString("path", null);
+        }
+        else
+        {
 
-            //converting to bitmap
-            if(restoredText!=null) {
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-                mImageBmp = BitmapFactory.decodeFile(restoredText, options);
-
-                //Show Capture in UI
-                mImage.setImageBitmap(mImageBmp);
-                mImage.setVisibility(View.VISIBLE);
-            }
-            //set percentage (randomized)
-            mPercentage = Integer.parseInt( extras.getString("message") );
-            //Percentage from server responses
-            mTextViewBf.setText( mPercentage.toString() + "%");
-            mTextViewBf.setVisibility(View.VISIBLE);
-
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                }
-//            }, 5000);
-//            //popup dialog box
-//            new AlertDialog.Builder(getBaseContext())
-//                    .setTitle("Good Job :)")
-//                    .setMessage("Come back in one week to check your progress")
-//                    .setNeutralButton("OK",
-//                            new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dlg, int sumthin) {
-//                                    moveTaskToBack(true);
-//                                    finish();
-//                                    try {
-//                                        dlg.dismiss();
-//                                    } catch (Exception e) {
-//                                        Log.e(LOG_TAG, "No dialog box response");
-//                                    }
-//                                }
-//                            }).show();
         }
     }
 
@@ -163,7 +128,8 @@ public class ResultActivity extends AppCompatActivity  {
             editor.commit();
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
+            // No uplaod so no compression
+            //mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
             byte[] bytes = baos.toByteArray();
 
             //converting to bitmap
@@ -184,12 +150,14 @@ public class ResultActivity extends AppCompatActivity  {
                 e.printStackTrace();
             }
 
-            final ProgressDialog progDailog = ProgressDialog.show(this,
+            /*final ProgressDialog progDailog = ProgressDialog.show(this,
                     "We are working on it",
                     "please wait....", true);
+            */
 
 
-            uploadData();
+            //uploadData();
+            calculateBFP();
 
             new Thread() {
                 public void run() {
@@ -199,7 +167,7 @@ public class ResultActivity extends AppCompatActivity  {
                         sleep(100000);
                     } catch (Exception e) {
                     }
-                    progDailog.dismiss();
+                    //progDailog.dismiss();
                 }
             }.start();
 
@@ -207,6 +175,75 @@ public class ResultActivity extends AppCompatActivity  {
             super.onActivityResult(requestCode,resultCode,data);
         }
     }
+
+    public void calculateBFP()
+    {
+
+
+        //try {
+        // buffImg = ImageIO.read(img );
+        //}
+        //catch (IOException e) { }
+
+        mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
+
+        int white = 0;
+        int black = 0;
+        int total = 0;
+        int threshold = 100;
+        for (int x = 0; x < mImageBmp.getWidth(); ++x)
+        {
+            for (int y = 0; y < mImageBmp.getHeight(); ++y)
+            {
+                // get pixel color
+                int pixel = mImageBmp.getPixel(x, y);
+                int A = Color.alpha(pixel);
+                int R = Color.red(pixel);
+                int G = Color.green(pixel);
+                int B = Color.blue(pixel);
+                int gray = (int) (0.2989 * R + 0.5870 * G + 0.1140 * B);
+
+                // use  threshold, above -> white, below -> black
+                if (gray > threshold)
+                {
+                    //Log.d(LOG_TAG, "White");
+                    gray = 255;
+                    white = white + 1;
+                }
+
+                else
+                {
+                    //Log.d(LOG_TAG, "Black");
+                    gray = 0;
+                    black = black + 1;
+                }
+
+                // set new pixel color to output bitmap
+                mImageBmpOut.setPixel(x, y, Color.argb(A, gray, gray, gray));
+            }
+            total = black + white;
+        }
+
+
+
+        //Show Capture in UI
+        mImageBmpOut = RotateBitmap(mImageBmpOut,90);
+        mImage.setImageBitmap(mImageBmpOut);
+        mImage.setVisibility(View.VISIBLE);
+
+
+
+
+        //set percentage (randomized)
+        mPercentage = ((double)black / (double)total) * 100;//Integer.parseInt( extras.getString("message") );
+        //Percentage from server responses
+        mTextViewBf.setText( String.format("%.0f", mPercentage) + "%");
+        mTextViewBf.setVisibility(View.VISIBLE);
+
+
+
+    }
+
 
     public void uploadData() {
         AWSMobileClient.defaultMobileClient()
