@@ -185,12 +185,19 @@ public class ResultActivity extends AppCompatActivity  {
         //}
         //catch (IOException e) { }
 
+        // Cut bitmap in the areas outside of body
+        // For now, lets say 20% off each side
+        int w = mImageBmp.getWidth();
+        int h = mImageBmp.getHeight();
+
+        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(0.2*w), 0, (int)(0.6*w),h);
+
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
 
         int white = 0;
         int black = 0;
         int total = 0;
-        int threshold = 100;
+        int threshold = 20;
         for (int x = 0; x < mImageBmp.getWidth(); ++x)
         {
             for (int y = 0; y < mImageBmp.getHeight(); ++y)

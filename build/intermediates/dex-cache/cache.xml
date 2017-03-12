@@ -75,6 +75,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="253722bb11948d5462f12f3f3417f2d751e19e2a">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a42b476689a8644cd7e278abd48b760b498d53e7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.1.0/jars/libs/internal_impl-23.1.0.jar"
         jumboMode="true"
         optimize="true"
@@ -102,21 +111,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
-        <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_65f75d4e76ea595563650e4160078fbc1286ec00/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-apigateway-core/2.3.9/2d37dee49e0f8aeb22373dfda9f13305663b9c06/aws-android-sdk-apigateway-core-2.3.9.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
         sha1="2d37dee49e0f8aeb22373dfda9f13305663b9c06">
         <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-apigateway-core-2.3.9_a766aa88ebb8568ef3c37b5ffb72b7c959cfbd5b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_65f75d4e76ea595563650e4160078fbc1286ec00/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -144,6 +153,15 @@
         revision="24.0.2"
         sha1="afbcc5de234f0b47a7187bdc02f5cc230231c1ca">
         <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_7768ed656f93140cd25e6b7d7be5c2cf6b590f72/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c756d14e99d39471e99013a1e8fd2f3813ed42bf">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_79c4872adfb0e1714dfe3516918a5c2953ad3246/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -219,6 +237,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_2d5b307d23c91a76db5c3d66f436911ea0d1e0df/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-sns/2.3.9/4a9c68c102c695a24eb9bba09f8a472e576614e5/aws-android-sdk-sns-2.3.9.jar"
         jumboMode="false"
         optimize="true"
@@ -228,12 +255,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1a57337a520bf40b9ad1e074cb780527dffa1aac">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-23.1.0_e57224be1950ba93e74ab4c05cb633be1c762ca4/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-s3/2.3.9/8b4d1ccbb09daafd17aa3eba99af31ad8aecf505/aws-android-sdk-s3-2.3.9.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="8b4d1ccbb09daafd17aa3eba99af31ad8aecf505">
         <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-s3-2.3.9_d66969ac4d518498f6cf563bffd7bfb20ff4e1ee/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v13/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="076c7d9e22cc325b8008ff799e0c06dfb8eefdf3">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_b246e59529b323c18012b006c1db90b523630f3f/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -252,6 +297,33 @@
         revision="24.0.2"
         sha1="143e52d913241fd7efcbdee1ed7c7adccb23f038">
         <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_b1895f6b045aa787e89b84e1a41a2407d1e68a38/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="683520c5434e3fbc1d5698fe1423b0eea50a4ed8">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_199587e8b6c13bdce6c7835e735b0cdf2e8a2efc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_0ca7889205dd2266560d69fc1d1cd4d668a08d3e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.0_2c0220cd570f62fc994e7304043f4b02e1b31166/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -390,6 +462,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.0_76996fce5ad6c9bfbca1270dffbd1474746fa234/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-sqs/2.3.9/a1278f3266ff8c936dd0de6485de8029a900091f/aws-android-sdk-sqs-2.3.9.jar"
         jumboMode="true"
         optimize="true"
@@ -414,6 +495,15 @@
         revision="24.0.2"
         sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
         <dex dex="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master 2/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.0_bef3b1c452ddbb33b7551e00974b30f2dc5ed6d9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.0_a88c47d5826d0bcbd6e260ed0143699f76eb9d7a/classes.dex" />
     </item>
     <item
         is-multidex="true"
