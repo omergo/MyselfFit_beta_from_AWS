@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
+    abi="x86_64,x86"
     api-level="24"
-    density="560dpi"
+    density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="231115128171608"
-    token="-7796200213578620055"
+    timestamp="22349545267555"
+    token="4469262006481731455"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="2812" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="91" />
     <task
         name="verifier"
-        duration="0" />
+        duration="3" />
 
     <artifact
-        location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+        location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
         type="DEX" />
 
     <build
-        timestamp="229579468205591"
+        timestamp="19855189070973"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\outputs\apk\app-debug.apk"
+            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="231115128171608"
+        timestamp="22349545267555"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Android\Projects\MyV\myselffit-beta-aws-my-sample-app-android\MySampleApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
             type="DEX" />
     </build>
 

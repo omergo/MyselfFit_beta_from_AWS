@@ -171,6 +171,7 @@ public class ResultActivity extends AppCompatActivity  {
             path = extras.get("data").toString();
             mImageBmp = BitmapFactory.decodeFile(path, options);
 
+            //TODO Omer is this garbage from Firebase?
             FileOutputStream stream = null;
             try {
                 stream = new FileOutputStream(path);
@@ -194,6 +195,7 @@ public class ResultActivity extends AppCompatActivity  {
                 public void run() {
                     try {
                         // sleep the thread, whatever time you want.
+                        //TODO Omer increase this value to 5 minutes
                         sleep(100000);
                     } catch (Exception e) {
                     }

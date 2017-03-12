@@ -130,6 +130,7 @@ public class PushListenerService extends GcmListenerService {
             // broadcast notification
             broadcast(from, data);
         } else {
+            //TODO Omer open result activity if not in foreground
             displayNotification(message);
         }
     }
