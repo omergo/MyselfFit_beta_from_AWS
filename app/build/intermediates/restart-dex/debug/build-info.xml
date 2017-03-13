@@ -5,29 +5,29 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="120498502646242"
+    timestamp="123641340298572"
     token="-727083858584664916"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1454" />
+        duration="1424" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1414" />
+        duration="1124" />
     <task
         name="verifier"
-        duration="272" />
+        duration="284" />
 
     <artifact
         location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="120498502646242"
+        timestamp="123641340298572"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"

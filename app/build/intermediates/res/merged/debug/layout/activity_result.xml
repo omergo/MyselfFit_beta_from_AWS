@@ -20,11 +20,11 @@
     <FrameLayout
         android:id="@+id/control"
         android:layout_width="match_parent"
-        android:layout_height="112dp"
         android:background="@color/cardview_dark_background"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:alpha="0.7">
+        android:alpha="0.7"
+        android:layout_height="130dp">
 
         <TextView
             android:layout_marginTop="10dp"
@@ -40,14 +40,23 @@
         <TextView
             android:layout_marginTop="10dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/textViewBf"
             android:layout_gravity="center_horizontal|center"
             android:text="8%"
             android:textColor="@android:color/white"
             android:textStyle="normal|bold"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            android:layout_height="wrap_content" />
 
     </FrameLayout>
+
+    <Button
+        android:text="ReScan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ReScanButton"
+        android:layout_alignTop="@+id/control"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="95dp" />
 
 </RelativeLayout>

@@ -21,6 +21,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +67,16 @@ public class ResultActivity extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
+        final Button button = (Button) findViewById(R.id.ReScanButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent2 = getIntent();
+                finish();
+                startActivity(intent2);
+            }
+        });
+
+
         //Allow only portrate orientation
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -110,7 +121,8 @@ public class ResultActivity extends AppCompatActivity  {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             Bundle extras = data.getExtras();
             //converting to bitmap
@@ -161,21 +173,28 @@ public class ResultActivity extends AppCompatActivity  {
             //uploadData();
             calculateBFP();
 
-            new Thread() {
-                public void run() {
-                    try {
-                        // sleep the thread, whatever time you want.
-                        //TODO Omer increase this value to 5 minutes
-                        sleep(100000);
-                    } catch (Exception e) {
-                    }
-                    //progDailog.dismiss();
-                }
-            }.start();
 
-        } else {
+//            new Thread()
+//            {
+//                public void run()
+//                {
+//                    try {
+//                        // sleep the thread, whatever time you want.
+//                        //TODO Omer increase this value to 5 minutes
+//                        sleep(100000);
+//                    } catch (Exception e) {
+//                    }
+//                    //progDailog.dismiss();
+//                }
+//            }.start();
+
+        }
+        else
+        {
             super.onActivityResult(requestCode,resultCode,data);
         }
+
+
     }
 
     public void calculateBFP()
@@ -310,6 +329,8 @@ public class ResultActivity extends AppCompatActivity  {
         matrix.postRotate(angle);
         return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
+
+
 
 
 }
