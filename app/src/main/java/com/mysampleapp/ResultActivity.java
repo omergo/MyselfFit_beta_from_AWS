@@ -118,10 +118,10 @@ public class ResultActivity extends AppCompatActivity  {
             options.inPreferredConfig = Bitmap.Config.ARGB_8888;
             mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
 
-            mImageBmp = RotateBitmap(mImageBmp,90);
+            //mImageBmp = RotateBitmap(mImageBmp,90);
             //Show Capture in UI
-            mImage.setImageBitmap(mImageBmp);
-            mImage.setVisibility(View.VISIBLE);
+            //mImage.setImageBitmap(mImageBmp);
+            //mImage.setVisibility(View.VISIBLE);
             //saving the file path
             SharedPreferences.Editor editor = getSharedPreferences("Bitmap", MODE_PRIVATE).edit();
             editor.putString("path", extras.get("data").toString());
@@ -136,6 +136,8 @@ public class ResultActivity extends AppCompatActivity  {
             options.inPreferredConfig = Bitmap.Config.ARGB_8888;
             path = extras.get("data").toString();
             mImageBmp = BitmapFactory.decodeFile(path, options);
+            mImageBmp = RotateBitmap(mImageBmp,90);
+
 
             //TODO Omer is this garbage from Firebase?
             FileOutputStream stream = null;
@@ -189,15 +191,16 @@ public class ResultActivity extends AppCompatActivity  {
         // For now, lets say 20% off each side
         int w = mImageBmp.getWidth();
         int h = mImageBmp.getHeight();
+        double percentageSides = 0.3;
 
-        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(0.2*w), 0, (int)(0.6*w),h);
+        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*w), 0, (int)((1-2*percentageSides)*w), h);
 
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
 
         int white = 0;
         int black = 0;
         int total = 0;
-        int threshold = 20;
+        int threshold = 100;
         for (int x = 0; x < mImageBmp.getWidth(); ++x)
         {
             for (int y = 0; y < mImageBmp.getHeight(); ++y)
@@ -234,7 +237,7 @@ public class ResultActivity extends AppCompatActivity  {
 
 
         //Show Capture in UI
-        mImageBmpOut = RotateBitmap(mImageBmpOut,90);
+        //mImageBmpOut = RotateBitmap(mImageBmpOut,90);
         mImage.setImageBitmap(mImageBmpOut);
         mImage.setVisibility(View.VISIBLE);
 

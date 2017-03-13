@@ -5,40 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="89849041950189"
+    timestamp="120498502646242"
     token="-727083858584664916"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1632" />
+        duration="1454" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="49" />
+        duration="1414" />
     <task
         name="verifier"
-        duration="1" />
+        duration="272" />
 
     <artifact
-        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
+        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="89675932165259"
+        timestamp="120498502646242"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="89849041950189"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>
