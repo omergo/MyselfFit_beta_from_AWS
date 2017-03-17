@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="e92f3ac98788d7a0990025251e3f6833e30cc492">
+        sha1="718fc2b657a45fa98f62b5860ae9c64d2dd59252">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a42b476689a8644cd7e278abd48b760b498d53e7/classes.dex" />
     </item>
     <item
@@ -205,7 +205,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.2"
-        sha1="220061357c1f1b0c88ff0b7cb958462895d98b46">
+        sha1="e09cfbf897467501b1a2238d91ccdcdf7b253d37">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_199587e8b6c13bdce6c7835e735b0cdf2e8a2efc/classes.dex" />
     </item>
     <item

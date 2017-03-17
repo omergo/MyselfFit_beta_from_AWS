@@ -39,6 +39,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 
 import com.mysampleapp.R;
 
@@ -213,6 +214,7 @@ public class ResultActivity extends AppCompatActivity  {
         // The bitmap that will be displayed at the end
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
 
+
         //-------------------------------------------------------------------------------
         // We need to convert the image into an array of bytes in grayscale
         //-------------------------------------------------------------------------------
@@ -234,7 +236,6 @@ public class ResultActivity extends AppCompatActivity  {
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
         mImageBmpOut.compress(Bitmap.CompressFormat.PNG, 100, stream);
         byte[] srcData = stream.toByteArray();
-
 
 
 
@@ -302,15 +303,16 @@ public class ResultActivity extends AppCompatActivity  {
         //-------------------------------------------------------------------------------
         // Now implement the threshold on the bytes
         //-------------------------------------------------------------------------------
+        // TODO Need to go through everything again?
         int white = 0;
         int black = 0;
         int count = 0;
-        for (int x = 0; x < mImageBmp.getWidth(); ++x)
+        for (int x = 0; x < mImageBmpOut.getWidth(); ++x)
         {
-            for (int y = 0; y < mImageBmp.getHeight(); ++y)
+            for (int y = 0; y < mImageBmpOut.getHeight(); ++y)
             {
                 // get pixel color
-                int pixel = mImageBmp.getPixel(x, y);
+                int pixel = mImageBmpOut.getPixel(x, y);
                 int A = Color.alpha(pixel);
                 int graysc = Color.red(pixel);
 
