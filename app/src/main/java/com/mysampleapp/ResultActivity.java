@@ -43,6 +43,8 @@ import java.io.IOException;
 import com.mysampleapp.R;
 
 import static android.R.attr.width;
+import static android.R.color.black;
+import static android.R.color.white;
 
 public class ResultActivity extends AppCompatActivity  {
 
@@ -201,25 +203,19 @@ public class ResultActivity extends AppCompatActivity  {
     {
 
 
-        //try {
-        // buffImg = ImageIO.read(img );
-        //}
-        //catch (IOException e) { }
-
         // Cut bitmap in the areas outside of body
-        // For now, lets say 20% off each side
-        int w = mImageBmp.getWidth();
-        int h = mImageBmp.getHeight();
+        // For now, lets say 30% off each side
+        int we = mImageBmp.getWidth();
+        int he = mImageBmp.getHeight();
         double percentageSides = 0.3;
+        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*we), 0, (int)((1-2*percentageSides)*we), he);
 
-        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*w), 0, (int)((1-2*percentageSides)*w), h);
-
+        // The bitmap that will be displayed at the end
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
 
-        int white = 0;
-        int black = 0;
-        int total = 0;
-        int threshold = 100;
+        //-------------------------------------------------------------------------------
+        // We need to convert the image into an array of bytes in grayscale
+        //-------------------------------------------------------------------------------
         for (int x = 0; x < mImageBmp.getWidth(); ++x)
         {
             for (int y = 0; y < mImageBmp.getHeight(); ++y)
@@ -231,40 +227,124 @@ public class ResultActivity extends AppCompatActivity  {
                 int G = Color.green(pixel);
                 int B = Color.blue(pixel);
                 int gray = (int) (0.2989 * R + 0.5870 * G + 0.1140 * B);
+                mImageBmpOut.setPixel(x, y, Color.argb(A, gray, gray, gray));
+            }
+        }
 
-                // use  threshold, above -> white, below -> black
-                if (gray > threshold)
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        mImageBmpOut.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] srcData = stream.toByteArray();
+
+
+
+
+        //-------------------------------------------------------------------------------
+        // Find the threshold using Utsu's method
+        // http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html
+        //-------------------------------------------------------------------------------
+        // Calculate histogram
+        int threshold = 0;
+        int ptr = 0;
+        int maxLevelValue = 0;
+        int histData[] = new int[256];;
+        // Clear histogram data
+        // Set all values to zero
+        while (ptr < histData.length) histData[ptr++] = 0;
+
+
+        // Calculate histogram and find the level with the max value
+        // Note: the max level value isn't required by the Otsu method
+        while (ptr < srcData.length)
+        {
+            int h = 0xFF & srcData[ptr];
+            histData[h] ++;
+            if (histData[h] > maxLevelValue) maxLevelValue = histData[h];
+            ptr ++;
+        }
+
+        // Total number of pixels
+        int total = srcData.length;
+
+        float sum = 0;
+        for (int t=0 ; t<256 ; t++) sum += t * histData[t];
+
+        float sumB = 0;
+        int wB = 0;
+        int wF = 0;
+
+        float varMax = 0;
+
+        for (int t=0 ; t<256 ; t++)
+        {
+            wB += histData[t];					// Weight Background
+            if (wB == 0) continue;
+
+            wF = total - wB;						// Weight Foreground
+            if (wF == 0) break;
+
+            sumB += (float) (t * histData[t]);
+
+            float mB = sumB / wB;				// Mean Background
+            float mF = (sum - sumB) / wF;		// Mean Foreground
+
+            // Calculate Between Class Variance
+            float varBetween = (float)wB * (float)wF * (mB - mF) * (mB - mF);
+
+            // Check if new maximum found
+            if (varBetween > varMax) {
+                varMax = varBetween;
+                threshold = t;
+            }
+        }
+
+
+
+        //-------------------------------------------------------------------------------
+        // Now implement the threshold on the bytes
+        //-------------------------------------------------------------------------------
+        int white = 0;
+        int black = 0;
+        int count = 0;
+        for (int x = 0; x < mImageBmp.getWidth(); ++x)
+        {
+            for (int y = 0; y < mImageBmp.getHeight(); ++y)
+            {
+                // get pixel color
+                int pixel = mImageBmp.getPixel(x, y);
+                int A = Color.alpha(pixel);
+                int graysc = Color.red(pixel);
+
+                if (graysc > threshold)
                 {
-                    //Log.d(LOG_TAG, "White");
-                    gray = 255;
+                    graysc = 255;
                     white = white + 1;
                 }
 
                 else
                 {
-                    //Log.d(LOG_TAG, "Black");
-                    gray = 0;
+                    graysc = 0;
                     black = black + 1;
                 }
 
                 // set new pixel color to output bitmap
-                mImageBmpOut.setPixel(x, y, Color.argb(A, gray, gray, gray));
+                mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
             }
-            total = black + white;
+            count = white + black;
         }
 
 
-
-        //Show Capture in UI
+        //-------------------------------------------------------------------------------
+        // Show Capture in UI
+        //-------------------------------------------------------------------------------
         //mImageBmpOut = RotateBitmap(mImageBmpOut,90);
         mImage.setImageBitmap(mImageBmpOut);
         mImage.setVisibility(View.VISIBLE);
 
 
-
-
-        //set percentage (randomized)
-        mPercentage = ((double)black / (double)total) * 100;//Integer.parseInt( extras.getString("message") );
+        //-------------------------------------------------------------------------------
+        // Calculate and display percentage
+        //-------------------------------------------------------------------------------
+        mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
         //Percentage from server responses
         mTextViewBf.setText( String.format("%.0f", mPercentage) + "%");
         mTextViewBf.setVisibility(View.VISIBLE);
