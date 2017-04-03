@@ -1,37 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
-    api-level="24"
+    abi="x86"
+    api-level="25"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="147793617347339"
+    timestamp="21202241829198"
     token="-727083858584664916"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="2120" />
+        duration="2506" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="66" />
     <task
         name="instant-run-transform"
-        duration="1394" />
+        duration="103" />
     <task
         name="verifier"
-        duration="300" />
+        duration="54" />
 
     <artifact
-        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
-        type="MAIN" />
+        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="147793617347339"
+        timestamp="19889371573833"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="20998869039894"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="21202241829198"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

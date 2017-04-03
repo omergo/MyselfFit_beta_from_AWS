@@ -208,12 +208,12 @@
         "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.0/res/drawable-xhdpi/abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
-        "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png",
-        "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
-    },
-    {
         "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png",
         "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable-xhdpi/common_signin_btn_icon_normal_light.9.png"
+    },
+    {
+        "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png",
+        "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/res/drawable-xhdpi/common_signin_btn_icon_disabled_focus_dark.9.png"
     },
     {
         "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/drawable-xhdpi/abc_cab_background_top_mtrl_alpha.9.png",

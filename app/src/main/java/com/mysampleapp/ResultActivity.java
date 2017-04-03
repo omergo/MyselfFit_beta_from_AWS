@@ -62,7 +62,7 @@ public class ResultActivity extends AppCompatActivity  {
     private Bitmap mImageBmpOut;
     private ImageView mImage;
     private TextView mTextViewBf;
-    private Number mPercentage;
+    private double mPercentage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -144,7 +144,7 @@ public class ResultActivity extends AppCompatActivity  {
 
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             // No uplaod so no compression
-            //mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
+            mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
             byte[] bytes = baos.toByteArray();
 
             //converting to bitmap
@@ -153,19 +153,19 @@ public class ResultActivity extends AppCompatActivity  {
             mImageBmp = BitmapFactory.decodeFile(path, options);
             mImageBmp = RotateBitmap(mImageBmp,90);
 
-
-            //TODO Omer is this garbage from Firebase?
-            FileOutputStream stream = null;
-            try {
-                stream = new FileOutputStream(path);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-            try {
-                stream.write(bytes);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//
+//            //TODO Omer is this garbage from Firebase?
+//            FileOutputStream stream = null;
+//            try {
+//                stream = new FileOutputStream(path);
+//            } catch (FileNotFoundException e) {
+//                e.printStackTrace();
+//            }
+//            try {
+//                stream.write(bytes);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             /*final ProgressDialog progDailog = ProgressDialog.show(this,
                     "We are working on it",
@@ -208,8 +208,8 @@ public class ResultActivity extends AppCompatActivity  {
         // For now, lets say 30% off each side
         int we = mImageBmp.getWidth();
         int he = mImageBmp.getHeight();
-        double percentageSides = 0.3;
-        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*we), 0, (int)((1-2*percentageSides)*we), he);
+        double percentageSides = 0.325;
+        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*we), (int)(0.5*he), (int)(0.175*we), (int)(0.344*he));
 
         // The bitmap that will be displayed at the end
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
@@ -347,8 +347,20 @@ public class ResultActivity extends AppCompatActivity  {
         // Calculate and display percentage
         //-------------------------------------------------------------------------------
         mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
+        // MATLAB algorithm: Assume men:
+        double BFPesimate = (1.248*mPercentage) - 87.4775;
+
+        // Check if negative or if maxed out
+        if(BFPesimate < 0 || BFPesimate > 37)
+        {
+            mTextViewBf.setText( "Error");
+        }
+        else
+        {
+            mTextViewBf.setText( String.format("%.0f", BFPesimate) + "%");
+        }
         //Percentage from server responses
-        mTextViewBf.setText( String.format("%.0f", mPercentage) + "%");
+
         mTextViewBf.setVisibility(View.VISIBLE);
 
 
