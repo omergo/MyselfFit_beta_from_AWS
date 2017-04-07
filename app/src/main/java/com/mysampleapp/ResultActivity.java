@@ -206,17 +206,37 @@ public class ResultActivity extends AppCompatActivity  {
 
         // Cut bitmap in the areas outside of body
         // For now, lets say 30% off each side
+        mImageBmp = RotateBitmap(mImageBmp,-90);
         int we = mImageBmp.getWidth();
         int he = mImageBmp.getHeight();
-        double percentageSides = 0.325;
-        mImageBmp = Bitmap.createBitmap(mImageBmp, (int)(percentageSides*we), (int)(0.5*he), (int)(0.175*we), (int)(0.344*he));
+
+
+
+
+        // Analysis area:
+        // The middle line exists at: 55%
+        // The top line exists at: 17%
+        double percentageSides = 0.375;
+        int top = (int)(0.17*he);
+        int bottom = (int)(0.55*he);
+        int height = bottom - top;
+        int right = (int)(0.5*we);
+        int left = right - (int)(percentageSides*height);
+        int width = right - left;
+
+
+
+
+        // Note that This begins on the top left and moves right-down
+        mImageBmp = Bitmap.createBitmap(mImageBmp, left, top, width, height);
+
 
         // The bitmap that will be displayed at the end
         mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
 
 
         //-------------------------------------------------------------------------------
-        // We need to convert the image into an array of bytes in grayscale
+        // We need to convert the part of the image into an array of bytes in grayscale
         //-------------------------------------------------------------------------------
         for (int x = 0; x < mImageBmp.getWidth(); ++x)
         {
@@ -328,8 +348,8 @@ public class ResultActivity extends AppCompatActivity  {
                     black = black + 1;
                 }
 
-                // set new pixel color to output bitmap
-                mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
+                // set new pixel color to output bitmap (TO DO go back)
+               // mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
             }
             count = white + black;
         }

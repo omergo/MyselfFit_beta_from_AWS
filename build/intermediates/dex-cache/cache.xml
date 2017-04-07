@@ -30,6 +30,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognito/2.3.9/d7e881325e8217fd65651fc7153a3db06f2e454c/aws-android-sdk-cognito-2.3.9.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognito-2.3.9_902d454e996109514d6be76a24eb5704f41ed158/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-s3/2.3.9/8b4d1ccbb09daafd17aa3eba99af31ad8aecf505/aws-android-sdk-s3-2.3.9.jar"
         jumboMode="true"
         optimize="true"
@@ -45,15 +54,6 @@
         revision="24.0.2"
         sha1="4a9c68c102c695a24eb9bba09f8a472e576614e5">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-sns-2.3.9_6c5f50e6b2babe27848f1f435420917f608bc367/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-cognito/2.3.9/d7e881325e8217fd65651fc7153a3db06f2e454c/aws-android-sdk-cognito-2.3.9.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d7e881325e8217fd65651fc7153a3db06f2e454c">
-        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognito-2.3.9_902d454e996109514d6be76a24eb5704f41ed158/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -90,15 +90,6 @@
         revision="24.0.2"
         sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_2d5b307d23c91a76db5c3d66f436911ea0d1e0df/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="cf5eb21ffd5585f1941b37cb6d45a5d35bc1669c">
-        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a42b476689a8644cd7e278abd48b760b498d53e7/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -156,21 +147,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
-        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_2d5b307d23c91a76db5c3d66f436911ea0d1e0df/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-sns/2.3.9/4a9c68c102c695a24eb9bba09f8a472e576614e5/aws-android-sdk-sns-2.3.9.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="4a9c68c102c695a24eb9bba09f8a472e576614e5">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-sns-2.3.9_6c5f50e6b2babe27848f1f435420917f608bc367/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.8.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_2d5b307d23c91a76db5c3d66f436911ea0d1e0df/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -201,15 +192,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2804b376a22c660e7a9164abb7c477133426fa1a">
-        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_199587e8b6c13bdce6c7835e735b0cdf2e8a2efc/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/jars/libs/internal_impl-23.1.0.jar"
         jumboMode="true"
         optimize="true"
@@ -237,21 +219,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.3.9/2fa9ee0e95329912656c8ccd98991b195a3ea539/aws-android-sdk-core-2.3.9.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="2fa9ee0e95329912656c8ccd98991b195a3ea539">
-        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.3.9_5c3e0457810e9a58cbbbe7b1e41de724bafdc816/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
         jumboMode="false"
         optimize="true"
         revision="24.0.2"
         sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
         <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_ece2e99fe34e20e5a1c44ba61ad85619fbb725ef/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/arielshappy/.gradle/caches/modules-2/files-2.1/com.amazonaws/aws-android-sdk-core/2.3.9/2fa9ee0e95329912656c8ccd98991b195a3ea539/aws-android-sdk-core-2.3.9.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2fa9ee0e95329912656c8ccd98991b195a3ea539">
+        <dex dex="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.3.9_5c3e0457810e9a58cbbbe7b1e41de724bafdc816/classes.dex" />
     </item>
     <item
         is-multidex="true"
