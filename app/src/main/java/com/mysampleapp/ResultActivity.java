@@ -64,6 +64,8 @@ public class ResultActivity extends AppCompatActivity  {
     private ImageView mImage;
     private TextView mTextViewBf;
     private double mPercentage;
+    int count = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -134,6 +136,8 @@ public class ResultActivity extends AppCompatActivity  {
             options.inPreferredConfig = Bitmap.Config.ARGB_8888;
             mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
 
+
+
             //mImageBmp = RotateBitmap(mImageBmp,90);
             //Show Capture in UI
             //mImage.setImageBitmap(mImageBmp);
@@ -174,23 +178,26 @@ public class ResultActivity extends AppCompatActivity  {
             */
 
 
-            //uploadData();
-            calculateBFP();
 
 
-//            new Thread()
-//            {
-//                public void run()
-//                {
-//                    try {
-//                        // sleep the thread, whatever time you want.
-//                        //TODO Omer increase this value to 5 minutes
-//                        sleep(100000);
-//                    } catch (Exception e) {
-//                    }
-//                    //progDailog.dismiss();
-//                }
-//            }.start();
+            double BFPesimate  = calculateBFP();
+
+
+            mImage.setImageBitmap(mImageBmpOriginal);
+            mImage.setVisibility(View.VISIBLE);
+
+            // Check if negative or if maxed out
+            if(BFPesimate < 0 || BFPesimate > 45)
+            {
+                mTextViewBf.setText( String.format("%.0f", BFPesimate) + "% (Error)");
+            }
+            else
+            {
+                mTextViewBf.setText( String.format("%.0f", BFPesimate) + "%");
+            }
+            //Percentage from server responses
+
+            mTextViewBf.setVisibility(View.VISIBLE);
 
         }
         else
@@ -201,7 +208,7 @@ public class ResultActivity extends AppCompatActivity  {
 
     }
 
-    public void calculateBFP()
+    public double calculateBFP()
     {
 
         mImageBmp = RotateBitmap(mImageBmp,-90);
@@ -325,7 +332,7 @@ public class ResultActivity extends AppCompatActivity  {
         // TODO Need to go through everything again?
         int white = 0;
         int black = 0;
-        int count = 0;
+
         for (int x = 0; x < mImageBmpOut.getWidth(); ++x)
         {
             for (int y = 0; y < mImageBmpOut.getHeight(); ++y)
@@ -354,34 +361,15 @@ public class ResultActivity extends AppCompatActivity  {
             count = white + black;
         }
 
-
-        //-------------------------------------------------------------------------------
-        // Show Capture in UI
-        //-------------------------------------------------------------------------------
-        //mImageBmpOut = RotateBitmap(mImageBmpOut,90);
-        mImage.setImageBitmap(mImageBmpOriginal);
-        mImage.setVisibility(View.VISIBLE);
-
-
         //-------------------------------------------------------------------------------
         // Calculate and display percentage
         //-------------------------------------------------------------------------------
         mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
         // MATLAB algorithm: Assume men:
-        double BFPesimate = (1.464*mPercentage) - 106.095;
+        double estimate_male = (1.464*mPercentage) - 106.095;
 
-        // Check if negative or if maxed out
-        if(BFPesimate < 0 || BFPesimate > 37)
-        {
-            mTextViewBf.setText( "Error");
-        }
-        else
-        {
-            mTextViewBf.setText( String.format("%.0f", BFPesimate) + "%");
-        }
-        //Percentage from server responses
 
-        mTextViewBf.setVisibility(View.VISIBLE);
+        return estimate_male;
 
 
 
