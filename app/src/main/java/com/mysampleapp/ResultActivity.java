@@ -58,6 +58,7 @@ public class ResultActivity extends AppCompatActivity  {
 
     public String path;
 
+    private Bitmap mImageBmpOriginal;
     private Bitmap mImageBmp;
     private Bitmap mImageBmpOut;
     private ImageView mImage;
@@ -203,9 +204,6 @@ public class ResultActivity extends AppCompatActivity  {
     public void calculateBFP()
     {
 
-
-        // Cut bitmap in the areas outside of body
-        // For now, lets say 30% off each side
         mImageBmp = RotateBitmap(mImageBmp,-90);
         int we = mImageBmp.getWidth();
         int he = mImageBmp.getHeight();
@@ -228,6 +226,7 @@ public class ResultActivity extends AppCompatActivity  {
 
 
         // Note that This begins on the top left and moves right-down
+        mImageBmpOriginal = mImageBmp;
         mImageBmp = Bitmap.createBitmap(mImageBmp, left, top, width, height);
 
 
@@ -349,7 +348,8 @@ public class ResultActivity extends AppCompatActivity  {
                 }
 
                 // set new pixel color to output bitmap (TO DO go back)
-               // mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
+                //mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
+                mImageBmpOriginal.setPixel(left + x, top + y, Color.argb(A, graysc, graysc, graysc));
             }
             count = white + black;
         }
@@ -359,7 +359,7 @@ public class ResultActivity extends AppCompatActivity  {
         // Show Capture in UI
         //-------------------------------------------------------------------------------
         //mImageBmpOut = RotateBitmap(mImageBmpOut,90);
-        mImage.setImageBitmap(mImageBmpOut);
+        mImage.setImageBitmap(mImageBmpOriginal);
         mImage.setVisibility(View.VISIBLE);
 
 
@@ -368,7 +368,7 @@ public class ResultActivity extends AppCompatActivity  {
         //-------------------------------------------------------------------------------
         mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
         // MATLAB algorithm: Assume men:
-        double BFPesimate = (1.248*mPercentage) - 87.4775;
+        double BFPesimate = (1.464*mPercentage) - 106.095;
 
         // Check if negative or if maxed out
         if(BFPesimate < 0 || BFPesimate > 37)
