@@ -1,4 +1,4 @@
-#Fri Apr 07 14:12:10 IDT 2017
+#Sat Apr 08 15:19:32 IDT 2017
 file.2=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognitoidentityprovider-2.3.9_cff10d72430437dfb1a539810c1f84545a1afcfc/classes.dex
 base.2=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognitoidentityprovider-2.3.9_cff10d72430437dfb1a539810c1f84545a1afcfc
 file.1=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-pinpoint-2.3.9_615fcafb4428b28299b2be5afe6628039715f644/classes.dex

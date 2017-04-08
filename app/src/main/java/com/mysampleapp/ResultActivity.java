@@ -1,5 +1,6 @@
 package com.mysampleapp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -13,6 +14,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -47,6 +49,7 @@ import static android.R.attr.width;
 import static android.R.color.black;
 import static android.R.color.white;
 
+
 public class ResultActivity extends AppCompatActivity  {
 
     public static final int REQUEST_IMAGE_CAPTURE = 1;
@@ -64,7 +67,12 @@ public class ResultActivity extends AppCompatActivity  {
     private ImageView mImage;
     private TextView mTextViewBf;
     private double mPercentage;
-    int count = 0;
+    private double BFPesimate;
+    private ProgressDialog mProgress;
+    private Bundle extras;
+
+    private Handler handlerUI;
+    private int count = 0;
 
 
     @Override
@@ -126,61 +134,41 @@ public class ResultActivity extends AppCompatActivity  {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(notificationReceiver);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    private class ProgressTask extends AsyncTask<String, Void, Boolean>
     {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            //converting to bitmap
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-            mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
+        private ProgressDialog dialog;
+        private Activity activity;
 
+        public ProgressTask(Activity activity)
+        {
+            this.activity = activity;
+            context = activity;
+            dialog = new ProgressDialog(context);
+        }
 
+        private Context context;
 
-            //mImageBmp = RotateBitmap(mImageBmp,90);
-            //Show Capture in UI
-            //mImage.setImageBitmap(mImageBmp);
-            //mImage.setVisibility(View.VISIBLE);
-            //saving the file path
-            SharedPreferences.Editor editor = getSharedPreferences("Bitmap", MODE_PRIVATE).edit();
-            editor.putString("path", extras.get("data").toString());
-            editor.commit();
+        protected void onPreExecute()
+        {
+            dialog = new ProgressDialog(context);
+            dialog.setMessage("Calculating your BFP");
+            dialog.setIndeterminate(false);
+            dialog.setCancelable(false);
+            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            dialog.show();
+        }
 
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            // No uplaod so no compression
-            mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
-            byte[] bytes = baos.toByteArray();
-
-            //converting to bitmap
-            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-            path = extras.get("data").toString();
-            mImageBmp = BitmapFactory.decodeFile(path, options);
-            mImageBmp = RotateBitmap(mImageBmp,90);
-
-//
-//            //TODO Omer is this garbage from Firebase?
-//            FileOutputStream stream = null;
-//            try {
-//                stream = new FileOutputStream(path);
-//            } catch (FileNotFoundException e) {
-//                e.printStackTrace();
-//            }
-//            try {
-//                stream.write(bytes);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-
-            /*final ProgressDialog progDailog = ProgressDialog.show(this,
-                    "We are working on it",
-                    "please wait....", true);
-            */
-
-
-
-
-            double BFPesimate  = calculateBFP();
+        @Override
+        protected void onPostExecute(final Boolean success)
+        {
+            if (dialog.isShowing())
+            {
+                dialog.dismiss();
+            }
+            if (!success)
+            {
+                Toast.makeText(context, "ERROR", Toast.LENGTH_LONG).show();
+            }
 
 
             mImage.setImageBitmap(mImageBmpOriginal);
@@ -189,7 +177,7 @@ public class ResultActivity extends AppCompatActivity  {
             // Check if negative or if maxed out
             if(BFPesimate < 0 || BFPesimate > 45)
             {
-                mTextViewBf.setText( String.format("%.0f", BFPesimate) + "% (Error)");
+                mTextViewBf.setText( "Error: Please check lighting/background");
             }
             else
             {
@@ -198,6 +186,56 @@ public class ResultActivity extends AppCompatActivity  {
             //Percentage from server responses
 
             mTextViewBf.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Boolean doInBackground(final String... args)
+        {
+            try {
+
+                //converting to bitmap
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
+
+
+                SharedPreferences.Editor editor = getSharedPreferences("Bitmap", MODE_PRIVATE).edit();
+                editor.putString("path", extras.get("data").toString());
+                editor.commit();
+
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                // No uplaod so no compression
+                mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
+                byte[] bytes = baos.toByteArray();
+
+                //converting to bitmap
+                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                path = extras.get("data").toString();
+                mImageBmp = BitmapFactory.decodeFile(path, options);
+                mImageBmp = RotateBitmap(mImageBmp,90);
+
+                BFPesimate  = calculateBFP();
+
+
+
+                return true;
+            } catch (Exception e){
+                Log.e("Schedule", "UpdateSchedule failed", e);
+                return false;
+            }
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+
+            // Call asyncTask for heavy lifting
+            new ProgressTask(this).execute();
+
+            extras = data.getExtras();
 
         }
         else
@@ -435,4 +473,7 @@ public class ResultActivity extends AppCompatActivity  {
 
 
 
+
 }
+
+
