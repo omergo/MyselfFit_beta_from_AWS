@@ -919,7 +919,7 @@ public class Camera2BasicFragment extends Fragment
 
     private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
         if (mFlashSupported) {
-            requestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
+            requestBuilder.set(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION,
                     CaptureRequest.FLASH_MODE_OFF);
         }
     }
