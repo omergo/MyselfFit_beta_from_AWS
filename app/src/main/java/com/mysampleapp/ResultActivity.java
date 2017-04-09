@@ -232,10 +232,11 @@ public class ResultActivity extends AppCompatActivity  {
     {
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
 
+            extras = data.getExtras();
             // Call asyncTask for heavy lifting
             new ProgressTask(this).execute();
 
-            extras = data.getExtras();
+
 
         }
         else

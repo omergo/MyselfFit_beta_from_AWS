@@ -298,22 +298,8 @@ public class Camera2BasicFragment extends Fragment
                     break;
                 }
                 case STATE_WAITING_LOCK: {
-                    Integer afState = result.get(CaptureResult.CONTROL_AF_STATE);
-//TODO Omer need figure out why it is stuck here in some android models
-//                      if (afState == null) {
                         captureStillPicture();
-//                    } else if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
-//                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState) {
-//                        // CONTROL_AE_STATE can be null on some devices
-//                        Integer aeState = result.get(CaptureResult.CONTROL_AE_STATE);
-//                        if (aeState == null ||
-//                                aeState == CaptureResult.CONTROL_AE_STATE_CONVERGED) {
-//                            mState = STATE_PICTURE_TAKEN;
-//                            captureStillPicture();
-//                        } else {
-//                            runPrecaptureSequence();
-//                        }
-//                    }
+//
                     break;
                 }
                 case STATE_WAITING_PRECAPTURE: {
@@ -845,7 +831,6 @@ public class Camera2BasicFragment extends Fragment
                     //showToast("Saved: " + mFile);
                     Log.d(TAG, mFile.toString());
                     unlockFocus();
-                    //Done(Omer) return result to activity and add bundle and data image
 
                     //sending to activity
                     Intent imageData = new Intent();

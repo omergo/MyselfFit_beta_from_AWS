@@ -118,6 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getSupportActionBar().setTitle(
                 savedInstanceState.getCharSequence(BUNDLE_KEY_TOOLBAR_TITLE));
         }
+        // Signed in and all good... go to result activity
         Intent intent = new Intent(this, ResultActivity.class);
         startActivityForResult(intent, REQUEST_IMAGE_CAPTURE);
     }
