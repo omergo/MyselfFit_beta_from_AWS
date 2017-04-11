@@ -214,7 +214,7 @@ public class ResultActivity extends AppCompatActivity  {
                 mImageBmp = BitmapFactory.decodeFile(path, options);
                 mImageBmp = RotateBitmap(mImageBmp,90);
 
-                BFPesimate  = calculateBFP();
+                BFPesimate  = calculateBFP((boolean)extras.get("isMale"));
 
 
 
@@ -247,7 +247,7 @@ public class ResultActivity extends AppCompatActivity  {
 
     }
 
-    public double calculateBFP()
+    public double calculateBFP(boolean isMale)
     {
 
         mImageBmp = RotateBitmap(mImageBmp,-90);
@@ -404,11 +404,24 @@ public class ResultActivity extends AppCompatActivity  {
         // Calculate and display percentage
         //-------------------------------------------------------------------------------
         mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
-        // MATLAB algorithm: Assume men:
-        double estimate_male = (1.464*mPercentage) - 106.095;
+        // MATLAB algorithm:
+        double estimate_BFP = 0.0;
+        if(isMale)
+        {
+            estimate_BFP = (1.464*mPercentage) - 106.096;
+            Log.d(LOG_TAG, "Calculating for Male: " + estimate_BFP);
+
+        }
+        else
+        {
+            estimate_BFP = (1.353*mPercentage) - 90.954;
+            Log.d(LOG_TAG, "Calculating for Female: " + estimate_BFP);
+
+        }
 
 
-        return estimate_male;
+
+        return estimate_BFP;
 
 
 

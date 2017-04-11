@@ -58,6 +58,7 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.mysampleapp.MainActivity;
@@ -76,6 +77,8 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import static android.R.attr.checked;
+
 public class Camera2BasicFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
 
@@ -85,6 +88,7 @@ public class Camera2BasicFragment extends Fragment
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     private static final int REQUEST_CAMERA_PERMISSION = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
+    private boolean isMale = true;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -340,6 +344,9 @@ public class Camera2BasicFragment extends Fragment
 
     };
 
+
+
+
     /**
      * Shows a {@link Toast} on the UI thread.
      *
@@ -413,8 +420,18 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+
+
+        rootView.findViewById(R.id.MaleRadio).setOnClickListener(this);
+        rootView.findViewById(R.id.FemaleRadio).setOnClickListener(this);
+
+        return rootView;
     }
+
+
+
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
@@ -835,6 +852,8 @@ public class Camera2BasicFragment extends Fragment
                     //sending to activity
                     Intent imageData = new Intent();
                     imageData.putExtra("data",mFile.toString());
+                    imageData.putExtra("isMale",isMale);
+                    Log.d(TAG, "Sent data as gender: " + isMale);
                     activity.setResult(ResultActivity.RESULT_OK,imageData);
                     activity.finish();
                 }
@@ -884,23 +903,25 @@ public class Camera2BasicFragment extends Fragment
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.picture: {
+        switch (view.getId())
+        {
+            case R.id.picture:
+            {
                 takePicture();
                 break;
             }
-//            case R.id.info: {
-//                Activity activity = getActivity();
-//                if (null != activity) {
-//                    new AlertDialog.Builder(activity)
-//                            .setMessage("remove this")
-//                            .setPositiveButton(android.R.string.ok, null)
-//                            .show();
-//                }
-//                break;
-//            }
+            case R.id.MaleRadio:
+                if (((RadioButton) view).isChecked())
+                    isMale = true;
+                break;
+            case R.id.FemaleRadio:
+                if (((RadioButton) view).isChecked())
+                    isMale = false;
+                break;
+
         }
     }
+
 
     private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
         if (mFlashSupported) {
