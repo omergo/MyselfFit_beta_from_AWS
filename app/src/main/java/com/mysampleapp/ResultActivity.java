@@ -416,7 +416,6 @@ public class ResultActivity extends AppCompatActivity  {
         {
             estimate_BFP = (1.353*mPercentage) - 90.954;
             Log.d(LOG_TAG, "Calculating for Female: " + estimate_BFP);
-
         }
 
 
