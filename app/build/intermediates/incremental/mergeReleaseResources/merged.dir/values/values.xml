@@ -434,7 +434,7 @@
     <string name="main_nav_menu_default_user_text">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
     <string name="main_nav_menu_item_home">Home</string>
     <string name="mfa_code_sent_message">Code sent.</string>
-    <string name="mfa_header">MFA verification is required to authenticate.</string>
+    <string name="mfa_header">MFA verification is required to authenticate (check email)</string>
     <string name="password_change_failed">Password change failed.</string>
     <string name="password_change_success">Password change succeeded.</string>
     <string name="phone_number_text">Phone number (+15551234567)</string>
@@ -460,7 +460,7 @@
     <string name="sign_in_email">Email</string>
     <string name="sign_in_forgot_password">Forgot Your Password?</string>
     <string name="sign_in_new_account">Create New Account</string>
-    <string name="sign_in_or">or sign in with</string>
+    <string name="sign_in_or">(other sign-in options coming)</string>
     <string name="sign_in_password">Password</string>
     <string name="sign_in_username">Username/Phone Number (+15551234567)</string>
     <string name="sign_up_confirm_code">Confirmation code</string>
