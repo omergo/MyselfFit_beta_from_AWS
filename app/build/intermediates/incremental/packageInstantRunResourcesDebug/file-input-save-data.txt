@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Apr 12 22:06:19 IDT 2017
+#Thu Apr 13 02:03:58 IDT 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/color/common_signin_btn_text_light.xml

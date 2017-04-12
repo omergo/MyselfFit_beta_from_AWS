@@ -39,11 +39,12 @@
         name="com.mysampleapp.Application"
         android:name="com.android.tools.fd.runtime.BootstrapApplication"
         android:allowBackup="true"
-        android:hardwareAccelerated="false"
         android:icon="@drawable/myselffit_icon"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:theme="@style/AppTheme" >
+
+        <!-- -android:hardwareAccelerated="false" makes the camera not work -->
         <activity
             android:name="com.mysampleapp.SplashActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"

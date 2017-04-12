@@ -30,7 +30,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:background="@drawable/cam_background">
+        android:background="@drawable/cam_background_smaller">
 
         <Button
             android:id="@+id/picture"

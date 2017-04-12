@@ -31,11 +31,11 @@
         android:allowBackup="true"
         android:icon="@drawable/myselffit_icon"
         android:label="@string/app_name"
-        android:largeHeap="true"
+
         android:theme="@style/AppTheme"
         android:name="com.mysampleapp.Application"
     >
-        <!---android:hardwareAccelerated="false" makes the camera not work-->
+        <!---android:hardwareAccelerated="false" makes the camera not work  android:largeHeap="true" was necessary until smaller image-->
     <activity
         android:name=".SplashActivity"
         android:label="@string/app_name"
