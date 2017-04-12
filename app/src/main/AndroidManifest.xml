@@ -32,67 +32,67 @@
         android:icon="@drawable/myselffit_icon"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme"
         android:name="com.mysampleapp.Application"
+    >
+        <!---android:hardwareAccelerated="false" makes the camera not work-->
+    <activity
+        android:name=".SplashActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".SignInActivity"
+        android:label="@string/title_activity_sign_in"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
         >
-        <activity
-            android:name=".SplashActivity"
-            android:label="@string/app_name"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".SignInActivity"
-            android:label="@string/title_activity_sign_in"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".demo.userpools.ForgotPasswordActivity"
-            android:label="@string/title_activity_forgot_password"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".demo.userpools.SignUpActivity"
-            android:label="@string/title_activity_sign_up"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".demo.userpools.MFAActivity"
-            android:label="@string/title_activity_mfa"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".demo.userpools.SignUpConfirmActivity"
-            android:label="@string/title_activity_sign_up_confirm"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:launchMode="singleInstance"
-            android:label="@string/title_activity_main">
-        </activity>
-        <activity
-            android:name=".camera.CameraActivity"
-            android:label="@string/app_name"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <activity
-            android:name=".ResultActivity"
-            android:label="@string/app_name"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            >
-        </activity>
-        <!-- BEGIN - APP CONTENT DELIVERY AND USER DATA STORAGE -->
+    </activity>
+    <activity
+        android:name=".demo.userpools.ForgotPasswordActivity"
+        android:label="@string/title_activity_forgot_password"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <activity
+        android:name=".demo.userpools.SignUpActivity"
+        android:label="@string/title_activity_sign_up"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <activity
+        android:name=".demo.userpools.MFAActivity"
+        android:label="@string/title_activity_mfa"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <activity
+        android:name=".demo.userpools.SignUpConfirmActivity"
+        android:label="@string/title_activity_sign_up_confirm"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <activity
+        android:name=".MainActivity"
+        android:launchMode="singleInstance"
+        android:label="@string/title_activity_main">
+    </activity>
+    <activity
+        android:name=".camera.CameraActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <activity
+        android:name=".ResultActivity"
+        android:label="@string/app_name"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        >
+    </activity>
+    <!-- BEGIN - APP CONTENT DELIVERY AND USER DATA STORAGE -->
 
         <!-- The following services and receivers are used to deal with transfer of
 	     files. If you copy and paste the user data storage or app content delivery

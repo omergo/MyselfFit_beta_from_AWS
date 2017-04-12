@@ -62,8 +62,6 @@ MERGED from [com.google.android.gms:play-services-base:7.8.0] /Users/arielshappy
 MERGED from [com.android.support:support-v4:23.1.0] /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.0/AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:33:9-41
-	android:hardwareAccelerated
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:35:9-44
 	android:allowBackup
 		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:31:9-35
 	android:icon
@@ -71,91 +69,91 @@ MERGED from [com.android.support:support-v4:23.1.0] /Users/arielshappy/Desktop/T
 	android:largeHeap
 		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:34:9-33
 	android:theme
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:36:9-40
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:35:9-40
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:37:9-51
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:36:9-51
 activity#com.mysampleapp.SplashActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:39:9-47:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:39:5-47:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:41:13-45
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:41:9-41
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:42:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:42:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:40:13-43
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:40:9-39
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:43:13-46:29
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:43:9-46:25
 action#android.intent.action.MAIN
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:44:17-69
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:44:13-65
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:44:25-66
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:44:21-62
 category#android.intent.category.LAUNCHER
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:45:17-77
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:45:13-73
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:45:27-74
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:45:23-70
 activity#com.mysampleapp.SignInActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:48:9-53:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:48:5-53:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:50:13-59
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:50:9-55
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:51:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:51:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:49:13-43
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:49:9-39
 activity#com.mysampleapp.demo.userpools.ForgotPasswordActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:54:9-59:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:54:5-59:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:56:13-67
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:56:9-63
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:57:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:57:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:55:13-66
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:55:9-62
 activity#com.mysampleapp.demo.userpools.SignUpActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:60:9-65:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:60:5-65:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:62:13-59
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:62:9-55
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:63:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:63:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:61:13-58
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:61:9-54
 activity#com.mysampleapp.demo.userpools.MFAActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:66:9-71:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:66:5-71:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:68:13-55
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:68:9-51
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:69:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:69:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:67:13-55
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:67:9-51
 activity#com.mysampleapp.demo.userpools.SignUpConfirmActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:72:9-77:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:72:5-77:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:74:13-67
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:74:9-63
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:75:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:75:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:73:13-65
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:73:9-61
 activity#com.mysampleapp.MainActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:78:9-82:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:78:5-82:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:81:13-56
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:81:9-52
 	android:launchMode
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:80:13-48
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:80:9-44
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:79:13-41
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:79:9-37
 activity#com.mysampleapp.camera.CameraActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:83:9-88:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:83:5-88:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:85:13-45
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:85:9-41
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:86:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:86:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:84:13-50
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:84:9-46
 activity#com.mysampleapp.ResultActivity
-ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:89:9-94:20
+ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:89:5-94:16
 	android:label
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:91:13-45
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:91:9-41
 	android:configChanges
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:92:13-83
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:92:9-79
 	android:name
-		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:90:13-43
+		ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:90:9-39
 service#com.amazonaws.mobileconnectors.s3.transferutility.TransferService
 ADDED from /Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/AndroidManifest.xml:103:9-124
 	android:enabled
