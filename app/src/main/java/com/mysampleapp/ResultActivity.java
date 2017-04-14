@@ -212,8 +212,9 @@ public class ResultActivity extends AppCompatActivity  {
                 options.inPreferredConfig = Bitmap.Config.ARGB_8888;
                 path = extras.get("data").toString();
                 mImageBmp = BitmapFactory.decodeFile(path, options);
-                mImageBmp = RotateBitmap(mImageBmp,90);
 
+
+                
                 BFPesimate  = calculateBFP((boolean)extras.get("isMale"));
 
 
@@ -250,7 +251,12 @@ public class ResultActivity extends AppCompatActivity  {
     public double calculateBFP(boolean isMale)
     {
 
-        mImageBmp = RotateBitmap(mImageBmp,-90);
+        mImageBmp = RotateBitmap(mImageBmp,90);
+
+        if(mImageBmp.getWidth() > mImageBmp.getHeight())
+            mImageBmp = RotateBitmap(mImageBmp,-90);
+
+
         int we = mImageBmp.getWidth();
         int he = mImageBmp.getHeight();
 
@@ -283,9 +289,9 @@ public class ResultActivity extends AppCompatActivity  {
         //-------------------------------------------------------------------------------
         // We need to convert the part of the image into an array of bytes in grayscale
         //-------------------------------------------------------------------------------
-        for (int x = 0; x < mImageBmp.getWidth(); ++x)
+        for (int x = 0; x < mImageBmp.getWidth() - 1; ++x)
         {
-            for (int y = 0; y < mImageBmp.getHeight(); ++y)
+            for (int y = 0; y < mImageBmp.getHeight() - 1; ++y)
             {
                 // get pixel color
                 int pixel = mImageBmp.getPixel(x, y);
