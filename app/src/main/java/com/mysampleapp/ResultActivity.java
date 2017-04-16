@@ -13,6 +13,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -171,13 +172,15 @@ public class ResultActivity extends AppCompatActivity  {
             }
 
 
+            //mImageBmpOriginal = Bitmap.createScaledBitmap(mImageBmpOriginal, 1536, 2048, true);
+
             mImage.setImageBitmap(mImageBmpOriginal);
             mImage.setVisibility(View.VISIBLE);
 
             // Check if negative or if maxed out
             if(BFPesimate < 0 || BFPesimate > 45)
             {
-                mTextViewBf.setText( "Error: Please check lighting/background");
+                mTextViewBf.setText( "Error: Check lighting/background");
             }
             else
             {
@@ -196,6 +199,7 @@ public class ResultActivity extends AppCompatActivity  {
                 //converting to bitmap
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                options.inSampleSize = 4;
                 mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
 
 
@@ -214,7 +218,6 @@ public class ResultActivity extends AppCompatActivity  {
                 mImageBmp = BitmapFactory.decodeFile(path, options);
 
 
-                
                 BFPesimate  = calculateBFP((boolean)extras.get("isMale"));
 
 
@@ -251,6 +254,8 @@ public class ResultActivity extends AppCompatActivity  {
     public double calculateBFP(boolean isMale)
     {
 
+
+
         mImageBmp = RotateBitmap(mImageBmp,90);
 
         if(mImageBmp.getWidth() > mImageBmp.getHeight())
@@ -259,6 +264,10 @@ public class ResultActivity extends AppCompatActivity  {
 
         int we = mImageBmp.getWidth();
         int he = mImageBmp.getHeight();
+
+
+        // Keeping ratio, scale bitmap
+        double ratio = ((double)he / (double)we);
 
 
 
@@ -289,9 +298,9 @@ public class ResultActivity extends AppCompatActivity  {
         //-------------------------------------------------------------------------------
         // We need to convert the part of the image into an array of bytes in grayscale
         //-------------------------------------------------------------------------------
-        for (int x = 0; x < mImageBmp.getWidth() - 1; ++x)
+        for (int x = 0; x < mImageBmp.getWidth(); ++x)
         {
-            for (int y = 0; y < mImageBmp.getHeight() - 1; ++y)
+            for (int y = 0; y < mImageBmp.getHeight(); ++y)
             {
                 // get pixel color
                 int pixel = mImageBmp.getPixel(x, y);

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/user_identity.png",
-        "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/res/mipmap-xxxhdpi/user_identity.png"
-    },
-    {
         "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/theme_2_pressed.png",
         "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/res/mipmap-xxxhdpi/theme_2_pressed.png"
+    },
+    {
+        "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/user_identity.png",
+        "source": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/src/main/res/mipmap-xxxhdpi/user_identity.png"
     },
     {
         "merged": "/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi/theme_3_pressed.png",
