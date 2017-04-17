@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Apr 16 12:49:19 IDT 2017
+#Sun Apr 16 15:31:15 IDT 2017
 210.set=ANDROID_RESOURCE
 14.set=ANDROID_RESOURCE
 180.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/mipmap-mdpi-v4/ic_launcher.png

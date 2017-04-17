@@ -51,6 +51,7 @@ import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.util.Range;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
@@ -706,6 +707,11 @@ public class Camera2BasicFragment extends Fragment
 
             // This is the output Surface we need to start preview.
             Surface surface = new Surface(texture);
+
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, Range.create(0, 30));
+//
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_LOCK, false);
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
 
             // We set up a CaptureRequest.Builder with the output Surface.
             mPreviewRequestBuilder

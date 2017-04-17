@@ -5,141 +5,33 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="144870783783176"
+    timestamp="154205945226374"
     token="-727083858584664916"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1353" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="51" />
+        duration="25" />
     <task
         name="verifier"
-        duration="7" />
+        duration="1" />
 
     <artifact
-        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-        type="DEX" />
-    <artifact
-        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
+        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="143014586995344"
+        timestamp="154205945226374"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="144299720973727"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_3/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_5/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_6/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_8/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_199587e8b6c13bdce6c7835e735b0cdf2e8a2efc/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_9/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_a42b476689a8644cd7e278abd48b760b498d53e7/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.1.0_39187d08955326fdd22b4ca65453f55886e27899/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-7.8.0_2d5b307d23c91a76db5c3d66f436911ea0d1e0df/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognitoidentityprovider-2.3.9_cff10d72430437dfb1a539810c1f84545a1afcfc/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.1.0_2c0220cd570f62fc994e7304043f4b02e1b31166/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_0ca7889205dd2266560d69fc1d1cd4d668a08d3e/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognito-2.3.9_902d454e996109514d6be76a24eb5704f41ed158/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.1.0_76996fce5ad6c9bfbca1270dffbd1474746fa234/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-sqs-2.3.9_3113a1571e84af70313e30bc6fbb74c14bb3bc3f/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-core-2.3.9_5c3e0457810e9a58cbbbe7b1e41de724bafdc816/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-sns-2.3.9_6c5f50e6b2babe27848f1f435420917f608bc367/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-s3-2.3.9_d66969ac4d518498f6cf563bffd7bfb20ff4e1ee/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.1.0_b246e59529b323c18012b006c1db90b523630f3f/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.7_ece2e99fe34e20e5a1c44ba61ad85619fbb725ef/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-23.1.0_e57224be1950ba93e74ab4c05cb633be1c762ca4/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_79c4872adfb0e1714dfe3516918a5c2953ad3246/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-apigateway-core-2.3.9_a766aa88ebb8568ef3c37b5ffb72b7c959cfbd5b/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-pinpoint-2.3.9_615fcafb4428b28299b2be5afe6628039715f644/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.1.0_a88c47d5826d0bcbd6e260ed0143699f76eb9d7a/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="144369059611421"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/instant-run-resources/resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_1/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_2/classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="144870783783176"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_0/classes.dex"
-            type="DEX" />
-        <artifact
-            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

@@ -199,6 +199,7 @@ public class ResultActivity extends AppCompatActivity  {
                 //converting to bitmap
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                // Average every 4 pixels
                 options.inSampleSize = 4;
                 mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
 
