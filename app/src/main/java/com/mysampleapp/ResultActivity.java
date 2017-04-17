@@ -277,8 +277,8 @@ public class ResultActivity extends AppCompatActivity  {
         // The middle line exists at: 55%
         // The top line exists at: 17%
         double percentageSides = 0.375;
-        int top = (int)(0.17*he);
-        int bottom = (int)(0.55*he);
+        int top = (int)(0.15*he);
+        int bottom = (int)(0.5*he);
         int height = bottom - top;
         int right = (int)(0.5*we);
         int left = right - (int)(percentageSides*height);
