@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MySampleApp.iml" filepath="$PROJECT_DIR$/MySampleApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyselfFit_beta_from_AWS.iml" filepath="$PROJECT_DIR$/MyselfFit_beta_from_AWS.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

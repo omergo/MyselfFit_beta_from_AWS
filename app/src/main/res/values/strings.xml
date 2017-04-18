@@ -26,7 +26,7 @@
   <string name="sign_in_password">Password</string>
   <string name="sign_in_new_account">Create New Account</string>
   <string name="sign_in_forgot_password">Forgot Your Password?</string>
-  <string name="sign_in_or">or sign in with</string>
+  <string name="sign_in_or">(other sign-in options coming)</string>
   <string name="main_nav_menu_default_user_text">\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020</string>
   <string name="content_helper_error_title">No Content Viewer</string>
   <string name="content_helper_error_no_app">No Viewing App exists for content type \'%s\'.</string>
@@ -38,7 +38,7 @@
   <string name="forgot_password_body">Set your new password with the verification code that was sent to you.</string>
   <string name="forgot_password_input_code_hint">Verification code</string>
   <string name="forgot_password_button_hint">Set password</string>
-  <string name="mfa_header">MFA verification is required to authenticate.</string>
+  <string name="mfa_header">MFA verification is required to authenticate (check email)</string>
   <string name="mfa_code_sent_message">Code sent.</string>
   <string name="verify_button_text">Verify</string>
   <string name="username_text">Username</string>

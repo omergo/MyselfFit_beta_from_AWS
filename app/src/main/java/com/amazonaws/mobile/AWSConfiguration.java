@@ -53,9 +53,9 @@ public class AWSConfiguration {
     public static final Regions AMAZON_S3_USER_FILES_BUCKET_REGION =
         Regions.fromName("us-east-1");
     public static final String AMAZON_COGNITO_USER_POOL_ID =
-        "us-east-1_QDFhQHSlM";
+        "us-east-1_SUQe1bVPe";
     public static final String AMAZON_COGNITO_USER_POOL_CLIENT_ID =
-        "e8f0908gb15vklqs3mhcoh14s";
+        "k75nv4hud9hrs5doc8p2459n7";
     public static final String AMAZON_COGNITO_USER_POOL_CLIENT_SECRET =
-        "8js21jpgtjpm7s4vcnocga2djia0h6ukclvf35a102t9murtl2";
+        "2pitj45tuolsedn0et8sl8sc4o0d4is74bv4qatcjg3sos68o6q";
 }

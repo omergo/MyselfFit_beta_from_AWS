@@ -1,5 +1,6 @@
 package com.mysampleapp;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -10,8 +11,11 @@ import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.graphics.Matrix;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
@@ -20,6 +24,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,8 +42,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 
 import com.mysampleapp.R;
+
+import static android.R.attr.width;
+import static android.R.color.black;
+import static android.R.color.white;
+
 
 public class ResultActivity extends AppCompatActivity  {
 
@@ -51,15 +62,35 @@ public class ResultActivity extends AppCompatActivity  {
 
     public String path;
 
+    private Bitmap mImageBmpOriginal;
     private Bitmap mImageBmp;
+    private Bitmap mImageBmpOut;
     private ImageView mImage;
     private TextView mTextViewBf;
-    private Number mPercentage;
+    private double mPercentage;
+    private double BFPesimate;
+    private ProgressDialog mProgress;
+    private Bundle extras;
+
+    private Handler handlerUI;
+    private int count = 0;
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+
+        final Button button = (Button) findViewById(R.id.ReScanButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent2 = getIntent();
+                finish();
+                startActivity(intent2);
+            }
+        });
+
 
         //Allow only portrate orientation
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
@@ -76,50 +107,10 @@ public class ResultActivity extends AppCompatActivity  {
         if(extras==null) {
             //Starting the camera for result
             startCameraActivity(this.findViewById(android.R.id.content).getRootView());
-        } else {
-            //getting the photo
-            SharedPreferences prefs = getSharedPreferences("Bitmap", MODE_PRIVATE);
-            String restoredText = prefs.getString("path", null);
+        }
+        else
+        {
 
-            //converting to bitmap
-            if(restoredText!=null) {
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-                mImageBmp = BitmapFactory.decodeFile(restoredText, options);
-
-                //Show Capture in UI
-                mImage.setImageBitmap(mImageBmp);
-                mImage.setVisibility(View.VISIBLE);
-            }
-            //set percentage (randomized)
-            mPercentage = Integer.parseInt( extras.getString("message") );
-            //Percentage from server responses
-            mTextViewBf.setText( mPercentage.toString() + "%");
-            mTextViewBf.setVisibility(View.VISIBLE);
-
-//            final Handler handler = new Handler();
-//            handler.postDelayed(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                }
-//            }, 5000);
-//            //popup dialog box
-//            new AlertDialog.Builder(getBaseContext())
-//                    .setTitle("Good Job :)")
-//                    .setMessage("Come back in one week to check your progress")
-//                    .setNeutralButton("OK",
-//                            new DialogInterface.OnClickListener() {
-//                                public void onClick(DialogInterface dlg, int sumthin) {
-//                                    moveTaskToBack(true);
-//                                    finish();
-//                                    try {
-//                                        dlg.dismiss();
-//                                    } catch (Exception e) {
-//                                        Log.e(LOG_TAG, "No dialog box response");
-//                                    }
-//                                }
-//                            }).show();
         }
     }
 
@@ -144,69 +135,313 @@ public class ResultActivity extends AppCompatActivity  {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(notificationReceiver);
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            //converting to bitmap
-            BitmapFactory.Options options = new BitmapFactory.Options();
-            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-            mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
+    private class ProgressTask extends AsyncTask<String, Void, Boolean>
+    {
+        private ProgressDialog dialog;
+        private Activity activity;
 
-            mImageBmp = RotateBitmap(mImageBmp,90);
-            //Show Capture in UI
-            mImage.setImageBitmap(mImageBmp);
+        public ProgressTask(Activity activity)
+        {
+            this.activity = activity;
+            context = activity;
+            dialog = new ProgressDialog(context);
+        }
+
+        private Context context;
+
+        protected void onPreExecute()
+        {
+            dialog = new ProgressDialog(context);
+            dialog.setMessage("Calculating your BFP");
+            dialog.setIndeterminate(false);
+            dialog.setCancelable(false);
+            dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            dialog.show();
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success)
+        {
+            if (dialog.isShowing())
+            {
+                dialog.dismiss();
+            }
+            if (!success)
+            {
+                Toast.makeText(context, "ERROR", Toast.LENGTH_LONG).show();
+            }
+
+
+            //mImageBmpOriginal = Bitmap.createScaledBitmap(mImageBmpOriginal, 1536, 2048, true);
+
+            mImage.setImageBitmap(mImageBmpOriginal);
             mImage.setVisibility(View.VISIBLE);
-            //saving the file path
-            SharedPreferences.Editor editor = getSharedPreferences("Bitmap", MODE_PRIVATE).edit();
-            editor.putString("path", extras.get("data").toString());
-            editor.commit();
 
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
-            byte[] bytes = baos.toByteArray();
-
-            //converting to bitmap
-            options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-            path = extras.get("data").toString();
-            mImageBmp = BitmapFactory.decodeFile(path, options);
-
-            //TODO Omer is this garbage from Firebase?
-            FileOutputStream stream = null;
-            try {
-                stream = new FileOutputStream(path);
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+            // Check if negative or if maxed out
+            if(BFPesimate < 0 || BFPesimate > 45)
+            {
+                mTextViewBf.setText( "Error: Check lighting/background");
             }
-            try {
-                stream.write(bytes);
-            } catch (IOException e) {
-                e.printStackTrace();
+            else
+            {
+                mTextViewBf.setText( String.format("%.0f", BFPesimate) + "%");
             }
+            //Percentage from server responses
 
-            final ProgressDialog progDailog = ProgressDialog.show(this,
-                    "We are working on it",
-                    "please wait....", true);
+            mTextViewBf.setVisibility(View.VISIBLE);
+        }
+
+        @Override
+        protected Boolean doInBackground(final String... args)
+        {
+            try {
+
+                //converting to bitmap
+                BitmapFactory.Options options = new BitmapFactory.Options();
+                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                // Average every 4 pixels
+                options.inSampleSize = 4;
+                mImageBmp = BitmapFactory.decodeFile(extras.get("data").toString(), options);
 
 
-            uploadData();
+                SharedPreferences.Editor editor = getSharedPreferences("Bitmap", MODE_PRIVATE).edit();
+                editor.putString("path", extras.get("data").toString());
+                editor.commit();
 
-            new Thread() {
-                public void run() {
-                    try {
-                        // sleep the thread, whatever time you want.
-                        //TODO Omer increase this value to 5 minutes
-                        sleep(100000);
-                    } catch (Exception e) {
-                    }
-                    progDailog.dismiss();
-                }
-            }.start();
+                ByteArrayOutputStream baos = new ByteArrayOutputStream();
+                // No uplaod so no compression
+                mImageBmp.compress(Bitmap.CompressFormat.JPEG, 20, baos);
+                byte[] bytes = baos.toByteArray();
 
-        } else {
+                //converting to bitmap
+                options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+                path = extras.get("data").toString();
+                mImageBmp = BitmapFactory.decodeFile(path, options);
+
+
+                BFPesimate  = calculateBFP((boolean)extras.get("isMale"));
+
+
+
+                return true;
+            } catch (Exception e){
+                Log.e("Schedule", "UpdateSchedule failed", e);
+                return false;
+            }
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
+
+            extras = data.getExtras();
+            // Call asyncTask for heavy lifting
+            new ProgressTask(this).execute();
+
+
+
+        }
+        else
+        {
             super.onActivityResult(requestCode,resultCode,data);
         }
+
+
     }
+
+    public double calculateBFP(boolean isMale)
+    {
+
+
+
+        mImageBmp = RotateBitmap(mImageBmp,90);
+
+        if(mImageBmp.getWidth() > mImageBmp.getHeight())
+            mImageBmp = RotateBitmap(mImageBmp,-90);
+
+
+        int we = mImageBmp.getWidth();
+        int he = mImageBmp.getHeight();
+
+
+        // Keeping ratio, scale bitmap
+        double ratio = ((double)he / (double)we);
+
+
+
+
+        // Analysis area:
+        // The middle line exists at: 55%
+        // The top line exists at: 17%
+        double percentageSides = 0.375;
+        int top = (int)(0.15*he);
+        int bottom = (int)(0.5*he);
+        int height = bottom - top;
+        int right = (int)(0.5*we);
+        int left = right - (int)(percentageSides*height);
+        int width = right - left;
+
+
+
+
+        // Note that This begins on the top left and moves right-down
+        mImageBmpOriginal = mImageBmp;
+        mImageBmp = Bitmap.createBitmap(mImageBmp, left, top, width, height);
+
+
+        // The bitmap that will be displayed at the end
+        mImageBmpOut = Bitmap.createBitmap(mImageBmp.getWidth(), mImageBmp.getHeight(), Bitmap.Config.ARGB_8888);
+
+
+        //-------------------------------------------------------------------------------
+        // We need to convert the part of the image into an array of bytes in grayscale
+        //-------------------------------------------------------------------------------
+        for (int x = 0; x < mImageBmp.getWidth(); ++x)
+        {
+            for (int y = 0; y < mImageBmp.getHeight(); ++y)
+            {
+                // get pixel color
+                int pixel = mImageBmp.getPixel(x, y);
+                int A = Color.alpha(pixel);
+                int R = Color.red(pixel);
+                int G = Color.green(pixel);
+                int B = Color.blue(pixel);
+                int gray = (int) (0.2989 * R + 0.5870 * G + 0.1140 * B);
+                mImageBmpOut.setPixel(x, y, Color.argb(A, gray, gray, gray));
+            }
+        }
+
+        ByteArrayOutputStream stream = new ByteArrayOutputStream();
+        mImageBmpOut.compress(Bitmap.CompressFormat.PNG, 100, stream);
+        byte[] srcData = stream.toByteArray();
+
+
+
+        //-------------------------------------------------------------------------------
+        // Find the threshold using Utsu's method
+        // http://www.labbookpages.co.uk/software/imgProc/otsuThreshold.html
+        //-------------------------------------------------------------------------------
+        // Calculate histogram
+        int threshold = 0;
+        int ptr = 0;
+        int maxLevelValue = 0;
+        int histData[] = new int[256];;
+        // Clear histogram data
+        // Set all values to zero
+        while (ptr < histData.length) histData[ptr++] = 0;
+
+
+        // Calculate histogram and find the level with the max value
+        // Note: the max level value isn't required by the Otsu method
+        while (ptr < srcData.length)
+        {
+            int h = 0xFF & srcData[ptr];
+            histData[h] ++;
+            if (histData[h] > maxLevelValue) maxLevelValue = histData[h];
+            ptr ++;
+        }
+
+        // Total number of pixels
+        int total = srcData.length;
+
+        float sum = 0;
+        for (int t=0 ; t<256 ; t++) sum += t * histData[t];
+
+        float sumB = 0;
+        int wB = 0;
+        int wF = 0;
+
+        float varMax = 0;
+
+        for (int t=0 ; t<256 ; t++)
+        {
+            wB += histData[t];					// Weight Background
+            if (wB == 0) continue;
+
+            wF = total - wB;						// Weight Foreground
+            if (wF == 0) break;
+
+            sumB += (float) (t * histData[t]);
+
+            float mB = sumB / wB;				// Mean Background
+            float mF = (sum - sumB) / wF;		// Mean Foreground
+
+            // Calculate Between Class Variance
+            float varBetween = (float)wB * (float)wF * (mB - mF) * (mB - mF);
+
+            // Check if new maximum found
+            if (varBetween > varMax) {
+                varMax = varBetween;
+                threshold = t;
+            }
+        }
+
+
+
+        //-------------------------------------------------------------------------------
+        // Now implement the threshold on the bytes
+        //-------------------------------------------------------------------------------
+        // TODO Need to go through everything again?
+        int white = 0;
+        int black = 0;
+
+        for (int x = 0; x < mImageBmpOut.getWidth(); ++x)
+        {
+            for (int y = 0; y < mImageBmpOut.getHeight(); ++y)
+            {
+                // get pixel color
+                int pixel = mImageBmpOut.getPixel(x, y);
+                int A = Color.alpha(pixel);
+                int graysc = Color.red(pixel);
+
+                if (graysc > threshold)
+                {
+                    graysc = 255;
+                    white = white + 1;
+                }
+
+                else
+                {
+                    graysc = 0;
+                    black = black + 1;
+                }
+
+                // set new pixel color to output bitmap (TO DO go back)
+                //mImageBmpOut.setPixel(x, y, Color.argb(A, graysc, graysc, graysc));
+                mImageBmpOriginal.setPixel(left + x, top + y, Color.argb(A, graysc, graysc, graysc));
+            }
+            count = white + black;
+        }
+
+        //-------------------------------------------------------------------------------
+        // Calculate and display percentage
+        //-------------------------------------------------------------------------------
+        mPercentage = ((double)black / (double)count) * 100;//Integer.parseInt( extras.getString("message") );
+        // MATLAB algorithm:
+        double estimate_BFP = 0.0;
+        if(isMale)
+        {
+            estimate_BFP = (1.464*mPercentage) - 106.096;
+            Log.d(LOG_TAG, "Calculating for Male: " + estimate_BFP);
+
+        }
+        else
+        {
+            estimate_BFP = (1.353*mPercentage) - 90.954;
+            Log.d(LOG_TAG, "Calculating for Female: " + estimate_BFP);
+        }
+
+
+
+        return estimate_BFP;
+
+
+
+    }
+
 
     public void uploadData() {
         AWSMobileClient.defaultMobileClient()
@@ -265,4 +500,9 @@ public class ResultActivity extends AppCompatActivity  {
     }
 
 
+
+
+
 }
+
+

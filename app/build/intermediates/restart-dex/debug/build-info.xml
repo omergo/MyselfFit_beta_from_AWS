@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86_64,x86"
-    api-level="24"
-    density="xxhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxxhdpi"
     format="8"
     plugin-version="2.2.3"
-    timestamp="22349545267555"
-    token="4469262006481731455"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="154205945226374"
+    token="-727083858584664916"
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="2812" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="91" />
+        duration="25" />
     <task
         name="verifier"
-        duration="3" />
+        duration="1" />
 
     <artifact
-        location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-        type="DEX" />
+        location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="19855189070973"
+        timestamp="154205945226374"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/outputs/apk/app-debug.apk"
+            location="/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="22349545267555"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/arielshappy/Desktop/MyselfFit_beta_from_AWS-master/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_4/classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

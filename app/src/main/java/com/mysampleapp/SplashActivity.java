@@ -108,11 +108,14 @@ public class SplashActivity extends Activity {
 
 
                 // if the user was already previously in to a provider.
-                if (provider != null) {
+                if (provider != null)
+                {
                     // asynchronously handle refreshing credentials and call our handler.
                     signInManager.refreshCredentialsWithProvider(SplashActivity.this,
                         provider, new SignInResultsHandler());
-                } else {
+                }
+                else
+                {
                     // Asyncronously go to the sign-in page (after the splash delay has expired).
                     goSignIn();
                 }

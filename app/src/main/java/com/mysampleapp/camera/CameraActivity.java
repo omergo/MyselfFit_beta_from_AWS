@@ -19,6 +19,8 @@ package com.mysampleapp.camera;
 import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.RadioButton;
 
 import com.mysampleapp.R;
 
@@ -35,13 +37,13 @@ public class CameraActivity extends Activity {
 
         if (null == savedInstanceState) {
             try {
-                getFragmentManager().beginTransaction()
-                        .replace(R.id.container11, Camera2BasicFragment.newInstance())
-                        .commit();
+                getFragmentManager().beginTransaction().replace(R.id.container11, Camera2BasicFragment.newInstance()).commit();
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
     }
+
+
 
 }

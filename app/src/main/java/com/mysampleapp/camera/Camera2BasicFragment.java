@@ -51,6 +51,7 @@ import android.support.annotation.NonNull;
 import android.support.v13.app.FragmentCompat;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.util.Range;
 import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
@@ -58,6 +59,9 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
+import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.mysampleapp.MainActivity;
@@ -76,6 +80,8 @@ import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
 
+import static android.R.attr.checked;
+
 public class Camera2BasicFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
 
@@ -85,6 +91,7 @@ public class Camera2BasicFragment extends Fragment
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     private static final int REQUEST_CAMERA_PERMISSION = 1;
     private static final String FRAGMENT_DIALOG = "dialog";
+    private boolean isMale = true;
 
     static {
         ORIENTATIONS.append(Surface.ROTATION_0, 90);
@@ -170,6 +177,9 @@ public class Camera2BasicFragment extends Fragment
      * An {@link AutoFitTextureView} for camera preview.
      */
     private AutoFitTextureView mTextureView;
+
+    private FrameLayout mFrameLayout;
+
 
     /**
      * A {@link CameraCaptureSession } for camera preview.
@@ -301,7 +311,7 @@ public class Camera2BasicFragment extends Fragment
                     Integer afState = result.get(CaptureResult.CONTROL_AF_STATE);
 //TODO Omer need figure out why it is stuck here in some android models
 //                      if (afState == null) {
-                        captureStillPicture();
+                    captureStillPicture();
 //                    } else if (CaptureResult.CONTROL_AF_STATE_FOCUSED_LOCKED == afState ||
 //                            CaptureResult.CONTROL_AF_STATE_NOT_FOCUSED_LOCKED == afState) {
 //                        // CONTROL_AE_STATE can be null on some devices
@@ -314,6 +324,7 @@ public class Camera2BasicFragment extends Fragment
 //                            runPrecaptureSequence();
 //                        }
 //                    }
+                    // TODO can just add else: captureStillPicutre
                     break;
                 }
                 case STATE_WAITING_PRECAPTURE: {
@@ -353,6 +364,9 @@ public class Camera2BasicFragment extends Fragment
         }
 
     };
+
+
+
 
     /**
      * Shows a {@link Toast} on the UI thread.
@@ -427,14 +441,27 @@ public class Camera2BasicFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+
+        View rootView = inflater.inflate(R.layout.fragment_camera2_basic, container, false);
+
+
+        rootView.findViewById(R.id.MaleRadio).setOnClickListener(this);
+        rootView.findViewById(R.id.FemaleRadio).setOnClickListener(this);
+
+        return rootView;
     }
+
+
+
 
     @Override
     public void onViewCreated(final View view, Bundle savedInstanceState) {
         view.findViewById(R.id.picture).setOnClickListener(this);
         //view.findViewById(R.id.info).setOnClickListener(this);
         mTextureView = (AutoFitTextureView) view.findViewById(R.id.texture);
+        //mFrameLayout =(FrameLayout) view.findViewById(R.id.control);
+
+
     }
 
     @Override
@@ -575,15 +602,15 @@ public class Camera2BasicFragment extends Fragment
                         rotatedPreviewWidth, rotatedPreviewHeight, maxPreviewWidth,
                         maxPreviewHeight, largest);
 
-                // We fit the aspect ratio of TextureView to the size of preview we picked.
-                int orientation = getResources().getConfiguration().orientation;
-                if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
-                    mTextureView.setAspectRatio(
-                            mPreviewSize.getWidth(), mPreviewSize.getHeight());
-                } else {
-                    mTextureView.setAspectRatio(
-                            mPreviewSize.getHeight(), mPreviewSize.getWidth());
-                }
+//                // We fit the aspect ratio of TextureView to the size of preview we picked.
+//                int orientation = getResources().getConfiguration().orientation;
+//                if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+//                    mTextureView.setAspectRatio(
+//                            mPreviewSize.getWidth(), mPreviewSize.getHeight());
+//                } else {
+//                    mTextureView.setAspectRatio(
+//                            mPreviewSize.getHeight(), mPreviewSize.getWidth());
+//                }
 
                 // Check if the flash is supported.
                 Boolean available = characteristics.get(CameraCharacteristics.FLASH_INFO_AVAILABLE);
@@ -689,6 +716,11 @@ public class Camera2BasicFragment extends Fragment
             // This is the output Surface we need to start preview.
             Surface surface = new Surface(texture);
 
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE, Range.create(0, 30));
+//
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_LOCK, false);
+//            mPreviewRequestBuilder.set(CaptureRequest.CONTROL_AE_MODE, CameraMetadata.CONTROL_AE_MODE_ON);
+
             // We set up a CaptureRequest.Builder with the output Surface.
             mPreviewRequestBuilder
                     = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
@@ -766,6 +798,7 @@ public class Camera2BasicFragment extends Fragment
             matrix.postRotate(180, centerX, centerY);
         }
         mTextureView.setTransform(matrix);
+
     }
 
     /**
@@ -816,6 +849,7 @@ public class Camera2BasicFragment extends Fragment
      */
     private void captureStillPicture() {
         try {
+            Log.d(TAG, "In still capture");
             final Activity activity = getActivity();
             if (null == activity || null == mCameraDevice) {
                 return;
@@ -841,14 +875,15 @@ public class Camera2BasicFragment extends Fragment
                 public void onCaptureCompleted(@NonNull CameraCaptureSession session,
                                                @NonNull CaptureRequest request,
                                                @NonNull TotalCaptureResult result) {
-                    showToast("Saved: " + mFile);
+                    //showToast("Saved: " + mFile);
                     Log.d(TAG, mFile.toString());
                     unlockFocus();
-                    //Done(Omer) return result to activity and add bundle and data image
 
                     //sending to activity
                     Intent imageData = new Intent();
                     imageData.putExtra("data",mFile.toString());
+                    imageData.putExtra("isMale",isMale);
+                    Log.d(TAG, "Sent data as gender: " + isMale);
                     activity.setResult(ResultActivity.RESULT_OK,imageData);
                     activity.finish();
                 }
@@ -898,27 +933,29 @@ public class Camera2BasicFragment extends Fragment
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.picture: {
+        switch (view.getId())
+        {
+            case R.id.picture:
+            {
                 takePicture();
                 break;
             }
-//            case R.id.info: {
-//                Activity activity = getActivity();
-//                if (null != activity) {
-//                    new AlertDialog.Builder(activity)
-//                            .setMessage("remove this")
-//                            .setPositiveButton(android.R.string.ok, null)
-//                            .show();
-//                }
-//                break;
-//            }
+            case R.id.MaleRadio:
+                if (((RadioButton) view).isChecked())
+                    isMale = true;
+                break;
+            case R.id.FemaleRadio:
+                if (((RadioButton) view).isChecked())
+                    isMale = false;
+                break;
+
         }
     }
 
+
     private void setAutoFlash(CaptureRequest.Builder requestBuilder) {
         if (mFlashSupported) {
-            requestBuilder.set(CaptureRequest.CONTROL_AE_MODE,
+            requestBuilder.set(CaptureRequest.CONTROL_AE_EXPOSURE_COMPENSATION,
                     CaptureRequest.FLASH_MODE_OFF);
         }
     }
