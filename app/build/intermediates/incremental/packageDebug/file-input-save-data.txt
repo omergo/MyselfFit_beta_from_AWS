@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Apr 18 20:30:48 IDT 2017
+#Tue Apr 18 20:45:36 IDT 2017
 20.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 143.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 493.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
@@ -70,7 +70,7 @@
 301.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_signin_btn_text_pressed_light.9.png
 14.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 424.set=ANDROID_RESOURCE
-163.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_light.9.png
+163.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
 40.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_scrubber_primary_mtrl_alpha.9.png
 379.set=ANDROID_RESOURCE
 317.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
@@ -130,7 +130,7 @@
 34.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_switch_track_mtrl_alpha.9.png
 337.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_textfield_activated_mtrl_alpha.9.png
 287.set=ANDROID_RESOURCE
-199.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+199.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
 210.set=ANDROID_RESOURCE
 165.set=ANDROID_RESOURCE
 371.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
@@ -318,7 +318,7 @@
 275.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 446.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 376.set=ANDROID_RESOURCE
-122.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
+122.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
 479.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 155.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/common_signin_btn_icon_disabled_dark.9.png
 299.set=ANDROID_RESOURCE
@@ -423,7 +423,7 @@
 163.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 360.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/aws-android-sdk-cognitoidentityprovider-2.3.9_cff10d72430437dfb1a539810c1f84545a1afcfc/classes.dex
 73.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
-393.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
+393.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_text_pressed_dark.9.png
 256.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_btn_rating_star_off_mtrl_alpha.png
 427.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_signin_btn_icon_normal_light.9.png
 67.set=ANDROID_RESOURCE
@@ -655,7 +655,7 @@
 207.set=DEX
 362.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/mipmap-xxxhdpi-v4/theme_2_selected.png
 75.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
-395.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_text_pressed_dark.9.png
+395.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
 258.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 429.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_icon_disabled_focus_light.9.png
 87.set=ANDROID_RESOURCE
@@ -685,7 +685,7 @@
 300.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_signin_btn_icon_disabled_focus_dark.9.png
 13.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 414.set=JAVA_RESOURCE
-162.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_menu_hardkey_panel_mtrl_mult.9.png
+162.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_text_disabled_focus_light.9.png
 369.set=ANDROID_RESOURCE
 316.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 41.set=ANDROID_RESOURCE
@@ -744,7 +744,7 @@
 336.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-7.8.0_79c4872adfb0e1714dfe3516918a5c2953ad3246/classes.dex
 49.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 277.set=ANDROID_RESOURCE
-198.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
+198.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-ldrtl-hdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
 200.set=ANDROID_RESOURCE
 369.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_cab_background_top_mtrl_alpha.9.png
 155.set=ANDROID_RESOURCE
@@ -851,7 +851,7 @@
 31.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 180.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/layout/activity_camera.xml
 334.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
-351.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_light.9.png
+351.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
 170.set=ANDROID_RESOURCE
 196.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 90.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_btn_rating_star_on_mtrl_alpha.png
@@ -926,7 +926,7 @@
 284.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 455.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 131.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png
-481.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
+481.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
 302.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_commit_search_api_mtrl_alpha.png
 15.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 434.set=ANDROID_RESOURCE
@@ -947,7 +947,7 @@
 291.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/abc_spinner_mtrl_am_alpha.9.png
 445.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 366.set=ANDROID_RESOURCE
-121.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_ic_menu_moreoverflow_mtrl_alpha.png
+121.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_switch_track_mtrl_alpha.9.png
 478.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 154.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxhdpi-v4/common_signin_btn_text_focus_light.9.png
 289.set=ANDROID_RESOURCE
@@ -1170,7 +1170,7 @@
 286.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 457.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 133.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_btn_check_to_on_mtrl_000.png
-483.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xxxhdpi-v4/abc_ic_menu_copy_mtrl_am_alpha.png
+483.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-mdpi-v4/abc_ic_clear_mtrl_alpha.png
 304.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_btn_radio_to_on_mtrl_015.png
 454.set=ANDROID_RESOURCE
 166.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-xhdpi-v4/abc_ic_menu_paste_mtrl_am_alpha.png
@@ -1474,7 +1474,7 @@ count=496
 209.set=ANDROID_RESOURCE
 30.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 333.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
-350.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/abc_ic_go_search_api_mtrl_alpha.png
+350.file=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_/res/drawable-hdpi-v4/common_signin_btn_icon_pressed_light.9.png
 195.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 366.base=/Users/arielshappy/Desktop/Temporary Name/Application/MyselfFit_beta_from_AWS/app/build/intermediates/res/resources-debug.ap_
 490.set=ANDROID_RESOURCE

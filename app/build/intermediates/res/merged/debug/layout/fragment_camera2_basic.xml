@@ -27,15 +27,15 @@
 
         <com.mysampleapp.camera.AutoFitTextureView
             android:id="@+id/texture"
-            android:layout_width="358dp"
-            android:layout_height="432dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal" />
 
         <ImageView
             android:id="@+id/control"
-            android:layout_width="358dp"
-            android:layout_height="432dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:background="@drawable/cam_background_smaller"
             android:adjustViewBounds="false"
@@ -46,7 +46,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="20dp"
-            android:layout_gravity="bottom|center"
+            android:layout_gravity="bottom|right"
             android:background="@drawable/button"/>
 
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
